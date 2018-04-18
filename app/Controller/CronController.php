@@ -1,7 +1,7 @@
 <?php
 /*********************************************************************************
- * Orangescrum Community Edition is a web based Project Management software developed by
- * Orangescrum. Copyright (C) 2013-2014
+ * COMPANY_NAME Community Edition is a web based Project Management software developed by
+ * COMPANY_NAME. Copyright (C) 2013-2014
  *
  * This program is free software; you can redistribute it and/or modify it under
  * the terms of the GNU General Public License version 3 as published by the
@@ -20,8 +20,8 @@
  * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
  * 02110-1301 USA.
  *
- * You can contact Orangescrum, 2059 Camden Ave. #118, San Jose, CA - 95124, US. 
-   or at email address support@orangescrum.com.
+ * You can contact COMPANY_NAME, 2059 Camden Ave. #118, San Jose, CA - 95124, US. 
+   or at email address support@COMPANY_NAME.com.
  *
  * The interactive user interfaces in modified source and object code versions
  * of this program must display Appropriate Legal Notices, as required under
@@ -29,13 +29,13 @@
  *
  * In accordance with Section 7(b) of the GNU General Public License version 3,
  * these Appropriate Legal Notices must retain the display of the "Powered by
- * Orangescrum" logo. If the display of the logo is not reasonably feasible for
+ * COMPANY_NAME" logo. If the display of the logo is not reasonably feasible for
  * technical reasons, the Appropriate Legal Notices must display the words
- * "Powered by Orangescrum".
+ * "Powered by COMPANY_NAME".
  ********************************************************************************/
 /*********************************************************************************
  * Description:  Defines the Cron jobs for all CLI actions
- * Portions created by Orangescrum are Copyright (C) Orangescrum.
+ * Portions created by COMPANY_NAME are Copyright (C) COMPANY_NAME.
  * All Rights Reserved.
  ********************************************************************************/
  
@@ -284,25 +284,25 @@ class CronController extends AppController{
 				if($usr['UserNotification']['value'] == 1) {
 					$sb_title = 'Daily Task Status Updates';
 					if($sub) {
-						$subject = $sub." Tasks on Orangescrum - ".date("m/d",strtotime(GMT_DATE));
+						$subject = $sub." Tasks on COMPANY_NAME - ".date("m/d",strtotime(GMT_DATE));
 					} else {
-						$subject = 'Orangescrum Daily Task Status - '.date("m/d",strtotime(GMT_DATE));
+						$subject = 'COMPANY_NAME Daily Task Status - '.date("m/d",strtotime(GMT_DATE));
 					}
 				}
 				elseif($usr['UserNotification']['value'] == 2) {
 					$sb_title = 'Weekly Task Status Updates';
 					if($sub) {
-						$subject = $sub." on Orangescrum - ".date("m/d",strtotime($upto))." - ".date("m/d",strtotime(GMT_DATE));
+						$subject = $sub." on COMPANY_NAME - ".date("m/d",strtotime($upto))." - ".date("m/d",strtotime(GMT_DATE));
 					} else {
-						$subject = 'Orangescrum Weekly Task Status - '.date("m/d",strtotime($upto))." - ".date("m/d",strtotime(GMT_DATE));
+						$subject = 'COMPANY_NAME Weekly Task Status - '.date("m/d",strtotime($upto))." - ".date("m/d",strtotime(GMT_DATE));
 					}
 				}
 				elseif($usr['UserNotification']['value'] == 3) {
 					$sb_title = 'Monthly Task Status Updates';
 					if($sub) {
-						$subject = $sub." on Orangescrum - ".date("m/d",strtotime($upto))." - ".date("m/d",strtotime(GMT_DATE));
+						$subject = $sub." on COMPANY_NAME - ".date("m/d",strtotime($upto))." - ".date("m/d",strtotime(GMT_DATE));
 					} else {
-						$subject = 'Orangescrum Monthly Task Status - '.date("m/d",strtotime($upto))." - ".date("m/d",strtotime(GMT_DATE));
+						$subject = 'COMPANY_NAME Monthly Task Status - '.date("m/d",strtotime($upto))." - ".date("m/d",strtotime(GMT_DATE));
 					}
 				}
 				
@@ -359,7 +359,7 @@ class CronController extends AppController{
 							</tr>
 							<tr>
 								<td align='left' style='font:10px Arial;padding-top:2px;color:#737373'>
-									You are receiving this email notification because you have subscribed to Orangescrum Task Status E-mail notification, to unsubscribe, please click <a href='".HTTP_ROOT."users/email_notifications' target='_blank'>Unsubscribe Email Notification</a>
+									You are receiving this email notification because you have subscribed to COMPANY_NAME Task Status E-mail notification, to unsubscribe, please click <a href='".HTTP_ROOT."users/email_notifications' target='_blank'>Unsubscribe Email Notification</a>
 								</td>	  
 							</tr>
 						</table>";
@@ -513,9 +513,9 @@ class CronController extends AppController{
 					$sub = $totaloverDueCases;
 				}
 				$taskduedt = $this->Format->dateFormatReverse($tmzone->GetDateTime($usr['User']['timezone_id'],$timezn['Timezone']['gmt_offset'],$timezn['Timezone']['dst_offset'],$timezn['Timezone']['code'],$gmt_datetime,"date"));
-				//$subject = "Orangescrum Task Due notification: ".$this->Format->dateFormatReverse($tmzone->GetDateTime($usr['User']['timezone_id'],$timezn['Timezone']['gmt_offset'],$timezn['Timezone']['dst_offset'],$timezn['Timezone']['code'],$gmt_datetime,"date"));
+				//$subject = "COMPANY_NAME Task Due notification: ".$this->Format->dateFormatReverse($tmzone->GetDateTime($usr['User']['timezone_id'],$timezn['Timezone']['gmt_offset'],$timezn['Timezone']['dst_offset'],$timezn['Timezone']['code'],$gmt_datetime,"date"));
 				
-				$subject = $sub." on Orangescrum - ".date("m/d",strtotime($taskduedt));
+				$subject = $sub." on COMPANY_NAME - ".date("m/d",strtotime($taskduedt));
 				$message = "<table cellpadding='0' cellspacing='0' align='left' width='100%'>
 								
 								<tr style='height:25px;'><td>&nbsp;</td></tr>
@@ -542,7 +542,7 @@ class CronController extends AppController{
 								</tr>
 								<tr>
 									<td align='left' style='font:10px Arial;padding-top:2px;color:#737373'>
-									You are receiving this email notification because you have subscribed to Orangescrum, to unsubscribe, please click <a href='".HTTP_ROOT."users/email_notifications' target='_blank'>Unsubscribe Email Notification</a>
+									You are receiving this email notification because you have subscribed to COMPANY_NAME, to unsubscribe, please click <a href='".HTTP_ROOT."users/email_notifications' target='_blank'>Unsubscribe Email Notification</a>
 								</td>
 								</tr>
 							</table>";
@@ -737,7 +737,7 @@ class CronController extends AppController{
 						$message = "<tr><td><table style='border-collapse:collapse;border-spacing:0;text-align:left;width:600px;border:1px solid #5191BD'>
 								<tr style='background:#5191BD;height:50px;'>
 									<td style='font:bold 14px Arial;padding:10px;color:#FFFFFF;'>
-										<span style='font-size:18px;'>Orangescrum</span> - Daily Task Updates
+										<span style='font-size:18px;'>COMPANY_NAME</span> - Daily Task Updates
 									</td>
 								</tr>
 								<tr>
@@ -748,7 +748,7 @@ class CronController extends AppController{
 								<tr>
 									<td align='left' style='font:14px Arial;padding:10px;border-top:1px solid #E1E1E1'>
 										Thanks,<br/>
-										Team Orangescrum
+										Team COMPANY_NAME
 									</td>	  
 								</tr>
 							</table></td></tr>
@@ -909,7 +909,7 @@ class CronController extends AppController{
 			$lastDate = gmdate('Y-m-d');
 			$frmdt = date("m/d/Y",  (strtotime($dateCurnt)-(7*24*60*60)));
 			$todt = date("m/d/Y",  strtotime($dateCurnt)-(24*60*60));
-			$subject = "Orangescrum Usage Report ".$frmdt." - ".$todt;
+			$subject = "COMPANY_NAME Usage Report ".$frmdt." - ".$todt;
 			$header ='<div style="font-family:verdana;font-size:12px;color:#333;padding:0;margin:0;border:1px solid #ccc;float:left;width:600px;">
 			<div style="background:#555555;padding:5px 10px;margin-bottom:15px;">
 				<div style="float:left;color:#FFF;font-size:26px;font-weight:bold;">'.ucfirst($val['Company']['name']).'</div>
@@ -1252,7 +1252,7 @@ class CronController extends AppController{
 			</ul>
 		</div><br/>';	
 				$message .="</div></div>";
-				$message .="<div style='clear:both'></div><div style='font-size:11px;padding-top:10px;color:#737373'>Don't want to receive this email?<br/>Go to the Orangescrum <a href='".HTTP_ROOT."users/email_notifications'>notification settings</a> and say NO to <b>Weekly Usage Report</b></div>";
+				$message .="<div style='clear:both'></div><div style='font-size:11px;padding-top:10px;color:#737373'>Don't want to receive this email?<br/>Go to the COMPANY_NAME <a href='".HTTP_ROOT."users/email_notifications'>notification settings</a> and say NO to <b>Weekly Usage Report</b></div>";
 				$mail_body = $message_top.$header.$statistics_div.$message;
                                 $to =$val['User']['email'];
                                 $mail_body = $message_top.$header.$statistics_div.$message;

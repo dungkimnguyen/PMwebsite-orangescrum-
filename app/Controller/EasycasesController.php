@@ -1,8 +1,8 @@
 <?php
 
 /* * *******************************************************************************
- * Orangescrum Community Edition is a web based Project Management software developed by
- * Orangescrum. Copyright (C) 2013-2017
+ * COMPANY_NAME Community Edition is a web based Project Management software developed by
+ * COMPANY_NAME. Copyright (C) 2013-2017
  *
  * This program is free software; you can redistribute it and/or modify it under
  * the terms of the GNU General Public License version 3 as published by the
@@ -21,8 +21,8 @@
  * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
  * 02110-1301 USA.
  *
- * You can contact Orangescrum, 2059 Camden Ave. #118, San Jose, CA - 95124, US. 
-  or at email address support@orangescrum.com.
+ * You can contact COMPANY_NAME, 2059 Camden Ave. #118, San Jose, CA - 95124, US. 
+  or at email address support@COMPANY_NAME.com.
  *
  * The interactive user interfaces in modified source and object code versions
  * of this program must display Appropriate Legal Notices, as required under
@@ -30,14 +30,14 @@
  *
  * In accordance with Section 7(b) of the GNU General Public License version 3,
  * these Appropriate Legal Notices must retain the display of the "Powered by
- * Orangescrum" logo. If the display of the logo is not reasonably feasible for
+ * COMPANY_NAME" logo. If the display of the logo is not reasonably feasible for
  * technical reasons, the Appropriate Legal Notices must display the words
- * "Powered by Orangescrum".
+ * "Powered by COMPANY_NAME".
  * ****************************************************************************** */
 
 /* * *******************************************************************************
  * Description:  Defines the Task controller
- * Portions created by Orangescrum are Copyright (C) Orangescrum.
+ * Portions created by COMPANY_NAME are Copyright (C) COMPANY_NAME.
  * All Rights Reserved.
  * ****************************************************************************** */
 App::uses('AppController', 'Controller');
@@ -209,7 +209,7 @@ class EasycasesController extends AppController {
         }
         $casefiles->query("DELETE FROM case_files WHERE easycase_id IN (" . implode(',', $arr) . ")");
 
-        //By Orangescrum
+        //By COMPANY_NAME
         //Delete records from case file drive table.
         $this->loadModel('CaseFileDrive');
         $condition = array('CaseFileDrive.easycase_id' => $arr);
@@ -257,7 +257,7 @@ class EasycasesController extends AppController {
     /**
      * This method gets the total storage used by user.
      *
-     * @author Orangescrum
+     * @author COMPANY_NAME
      * @method ajax_getStorage
      * @param
      * @return string
@@ -361,7 +361,7 @@ class EasycasesController extends AppController {
 
             $arr['CS_message'] = $msg;
 
-            //By Orangescrum
+            //By COMPANY_NAME
             if (isset($this->params->query['data']['Easycase']['cloud_storage_files']))
                 $arr['cloud_storages'] = $this->params->query['data']['Easycase']['cloud_storage_files'];
         }
@@ -2023,7 +2023,7 @@ class EasycasesController extends AppController {
                     }
 
                     //$filesArr[$fkey]['CaseFile']['file_shname'] = $frmt->shortLength($caseFileName,37);
-                    //By Orangescrum
+                    //By COMPANY_NAME
                     $downloadurl = $getFiles['CaseFile']['downloadurl'];
                     if (isset($downloadurl) && trim($downloadurl)) {
                         if (stristr($downloadurl, 'www.dropbox.com')) {
@@ -3774,7 +3774,7 @@ class EasycasesController extends AppController {
             //Jyoti End
             /* $sqldata = "SELECT case_no,project_id FROM `easycases` WHERE `id`='".$caseId."' ";
               $dataeasycase = $this->Easycase->query($sqldata);
-              $sqlinsert = "INSERT INTO `orangescrum`.`case_activities` (`easycase_id`, `case_no`, `project_id`, `user_id`, `type`,`dt_created`) VALUES ('".$caseId."','".$dataeasycase['0']['easycases']['case_no']."','".$dataeasycase['0']['easycases']['project_id']."', '".SES_ID."','6','".GMT_DATETIME."')";
+              $sqlinsert = "INSERT INTO `COMPANY_NAME`.`case_activities` (`easycase_id`, `case_no`, `project_id`, `user_id`, `type`,`dt_created`) VALUES ('".$caseId."','".$dataeasycase['0']['easycases']['case_no']."','".$dataeasycase['0']['easycases']['project_id']."', '".SES_ID."','6','".GMT_DATETIME."')";
               $sqlinsertdata=$this->Easycase->query($sqlinsert); */
 
             $protyCls = '';
@@ -3838,7 +3838,7 @@ class EasycasesController extends AppController {
             //Jyoti End
             /* $sqldata = "SELECT case_no,project_id FROM `easycases` WHERE `id`='".$caseId."' ";
               $dataeasycase = $this->Easycase->query($sqldata);
-              $sqlinsert = "INSERT INTO `orangescrum`.`case_activities` (`easycase_id`, `case_no`, `project_id`, `user_id`, `type`,`dt_created`) VALUES ('".$caseId."','".$dataeasycase['0']['easycases']['case_no']."','".$dataeasycase['0']['easycases']['project_id']."', '".SES_ID."','6','".GMT_DATETIME."')";
+              $sqlinsert = "INSERT INTO `COMPANY_NAME`.`case_activities` (`easycase_id`, `case_no`, `project_id`, `user_id`, `type`,`dt_created`) VALUES ('".$caseId."','".$dataeasycase['0']['easycases']['case_no']."','".$dataeasycase['0']['easycases']['project_id']."', '".SES_ID."','6','".GMT_DATETIME."')";
               $sqlinsertdata=$this->Easycase->query($sqlinsert); */
 
             //if($upd) {
@@ -4419,7 +4419,7 @@ class EasycasesController extends AppController {
                         //$getEmailUser = $this->Easycase->query("SELECT DISTINCT User.id, User.name, User.email FROM users as User,user_notifications as UserNotification,case_user_emails as CaseUserEmail,project_users as ProjectUser,company_users as CompanyUser WHERE User.id=UserNotification.user_id AND CaseUserEmail.user_id=UserNotification.user_id AND CaseUserEmail.easycase_id='".$caseStsId."' AND CaseUserEmail.ismail='1' AND UserNotification.case_status='1' AND User.isactive='1' AND CompanyUser.user_id=UserNotification.user_id AND CompanyUser.is_active='1' AND CompanyUser.company_id='".SES_COMP."' AND ProjectUser.user_id=User.id AND ProjectUser.project_id='".$data['projId']."' AND ProjectUser.default_email='1'");
                         //$getEmailUser = $this->Easycase->query("SELECT DISTINCT User.id, User.name, User.email FROM users as User,user_notifications as UserNotification,case_user_emails as CaseUserEmail,project_users as ProjectUser,company_users as CompanyUser WHERE User.id=UserNotification.user_id AND CaseUserEmail.user_id=UserNotification.user_id AND CaseUserEmail.ismail='1' AND UserNotification.case_status='1' AND User.isactive='1' AND CompanyUser.user_id=UserNotification.user_id AND CompanyUser.is_active='1' AND CompanyUser.company_id='".SES_COMP."' AND ProjectUser.user_id=User.id AND ProjectUser.project_id='".$data['projId']."' AND ProjectUser.default_email='1'");
 
-                        /* Commenting by Orangescrum
+                        /* Commenting by COMPANY_NAME
                           if (isset($this->data['emailUser'])) {
                           $getEmailUser = $this->Easycase->query("SELECT DISTINCT User.id, User.name, User.email FROM users as User WHERE User.id IN (" . implode(',', $this->data['emailUser']) . ") AND User.isactive='1' ");
                           } else {
@@ -4427,7 +4427,7 @@ class EasycasesController extends AppController {
                           $getEmailUser = $this->Easycase->query("SELECT DISTINCT User.id, User.name, User.email FROM users as User,user_notifications as UserNotification,case_user_emails as CaseUserEmail,project_users as ProjectUser,company_users as CompanyUser WHERE User.id=UserNotification.user_id AND CaseUserEmail.user_id=UserNotification.user_id AND CaseUserEmail.easycase_id='".$caseStsId."' AND CaseUserEmail.ismail='1' AND UserNotification.case_status='1' AND User.isactive='1' AND CompanyUser.user_id=UserNotification.user_id AND CompanyUser.is_active='1' AND CompanyUser.company_id='".SES_COMP."' AND ProjectUser.user_id=User.id AND ProjectUser.project_id='".$data['projId']."'");
                           } */
 
-                        //Added by Orangescrum
+                        //Added by COMPANY_NAME
                         $emailUsers = $CaseUserEmail->getEmailUsers($commonCaseId);
                         $getEmailUser = $this->ProjectUser->getAllNotifyUser($data['projId'], $emailUsers);
                         $this->Postcase->mailToUser($data, $getEmailUser);
@@ -4443,7 +4443,7 @@ class EasycasesController extends AppController {
                 $data = $this->data;
             }
 
-            /* Commenting by Orangescrum
+            /* Commenting by COMPANY_NAME
               if (isset($data['emailUser']) && $data['emailUser']) {
               $getEmailUser = $this->Easycase->query("SELECT DISTINCT User.id, User.name, User.email FROM users as User WHERE User.id IN (" . implode(',', $data['emailUser']) . ") AND User.isactive='1' ");
               } elseif (isset($data['emailUser'])) {
@@ -4454,7 +4454,7 @@ class EasycasesController extends AppController {
               $getEmailUser = $this->Format->getAllNotifyUser($data['projId'], 'reply');
               } */
 
-            //Added by Orangescrum
+            //Added by COMPANY_NAME
             if ($data['caseIstype'] == 1) {
                 $getEmailUser = $this->ProjectUser->getAllNotifyUser($data['projId'], $data['emailUser'], 'new');
             } else {
@@ -5556,7 +5556,7 @@ class EasycasesController extends AppController {
 
     /**
      * @method mydashboard
-     * @author Orangescrum
+     * @author COMPANY_NAME
      * @return html
      */
     function mydashboard() {
@@ -5593,7 +5593,7 @@ class EasycasesController extends AppController {
 
     /**
      * @method ajax_save_dashboard_order
-     * @author Orangescrum
+     * @author COMPANY_NAME
      * @return boolean
      */
     function ajax_save_dashboard_order() {
@@ -5614,7 +5614,7 @@ class EasycasesController extends AppController {
 
     /**
      * @method to_dos
-     * @author Orangescrum
+     * @author COMPANY_NAME
      * @return json
      */
     function to_dos() {
@@ -5668,7 +5668,7 @@ class EasycasesController extends AppController {
 
     /**
      * @method recent_projects
-     * @author Orangescrum
+     * @author COMPANY_NAME
      * @return json
      */
     function recent_projects() {
@@ -5691,7 +5691,7 @@ class EasycasesController extends AppController {
 
     /**
      * @method recent_activities
-     * @author Orangescrum
+     * @author COMPANY_NAME
      * @return json
      */
     function recent_activities() {
@@ -5736,7 +5736,7 @@ class EasycasesController extends AppController {
 
     /**
      * @method recent_milestones
-     * @author Orangescrum
+     * @author COMPANY_NAME
      * @return json
      */
     function recent_milestones() {
@@ -5797,7 +5797,7 @@ class EasycasesController extends AppController {
 
     /**
      * @method statistics
-     * @author Orangescrum
+     * @author COMPANY_NAME
      * @return json
      */
     function statistics() {
@@ -5847,7 +5847,7 @@ class EasycasesController extends AppController {
 
     /**
      * @method usage_details
-     * @author Orangescrum
+     * @author COMPANY_NAME
      * @return json
      */
     function usage_details() {
@@ -6387,7 +6387,7 @@ CompanyUser.company_id=" . SES_COMP . " $usercond) AS total_users $projectcond";
     /**
      * @method public taskDownload() Create downloadable folder which will contain a .csv File and a Folder containg all the Attachment
      * @return string Returns the downloadable URL
-     * @author GDR<support@Orangescrum.com>
+     * @author GDR<support@COMPANY_NAME.com>
      */
     function taskDownload() {
 

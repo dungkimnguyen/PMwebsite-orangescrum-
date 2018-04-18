@@ -1,7 +1,7 @@
 <?php
 /*********************************************************************************
- * Orangescrum Community Edition is a web based Project Management software developed by
- * Orangescrum. Copyright (C) 2013-2014
+ * COMPANY_NAME Community Edition is a web based Project Management software developed by
+ * COMPANY_NAME. Copyright (C) 2013-2014
  *
  * This program is free software; you can redistribute it and/or modify it under
  * the terms of the GNU General Public License version 3 as published by the
@@ -20,8 +20,8 @@
  * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
  * 02110-1301 USA.
  *
- * You can contact Orangescrum, 2059 Camden Ave. #118, San Jose, CA - 95124, US. 
-   or at email address support@orangescrum.com.
+ * You can contact COMPANY_NAME, 2059 Camden Ave. #118, San Jose, CA - 95124, US. 
+   or at email address support@COMPANY_NAME.com.
  *
  * The interactive user interfaces in modified source and object code versions
  * of this program must display Appropriate Legal Notices, as required under
@@ -29,9 +29,9 @@
  *
  * In accordance with Section 7(b) of the GNU General Public License version 3,
  * these Appropriate Legal Notices must retain the display of the "Powered by
- * Orangescrum" logo. If the display of the logo is not reasonably feasible for
+ * COMPANY_NAME" logo. If the display of the logo is not reasonably feasible for
  * technical reasons, the Appropriate Legal Notices must display the words
- * "Powered by Orangescrum".
+ * "Powered by COMPANY_NAME".
  ********************************************************************************/
 ?>
 <?php
@@ -46,7 +46,7 @@ if(trim($settings['database']) == "") {
 	<head>
 		<meta name="robots" content="noindex,nofollow" />
 		<link rel="shortcut icon" href="images/favicon_new.ico"/>
-		<title>Orangescrum Setup Wizard</title>
+		<title>COMPANY_NAME Setup Wizard</title>
 		<style>
 		*{
 			padding:5;
@@ -68,7 +68,7 @@ if(trim($settings['database']) == "") {
 				<table cellpadding="8" cellspacing="8" style="border:1px solid #999999;color:#000000" align="center" width="520px">
 					<tr>
 						<td align="center" style="border-bottom:1px solid #999999">
-							<h3 style="color:#245271">4 simple steps to get started with Orangescrum</h3>
+							<h3 style="color:#245271">4 simple steps to get started with COMPANY_NAME</h3>
 						</td>
 					</tr>
 					<tr>
@@ -114,7 +114,7 @@ if(trim($settings['database']) == "") {
 	<head>
 		<meta name="robots" content="noindex,nofollow" />
 		<link rel="shortcut icon" href="images/favicon_new.ico"/>
-		<title>Orangescrum Setup Wizard</title>
+		<title>COMPANY_NAME Setup Wizard</title>
 		<style>
 		*{
 			padding:5;
@@ -136,12 +136,12 @@ if(trim($settings['database']) == "") {
 				<table cellpadding="8" cellspacing="8" style="border:1px solid #999999;color:#000000" align="center" width="520px">
 					<tr>
 						<td align="center" style="border-bottom:1px solid #999999">
-							<h3 style="color:#245271">2 simple steps to get started with Orangescrum</h3>
+							<h3 style="color:#245271">2 simple steps to get started with COMPANY_NAME</h3>
 						</td>
 					</tr>
 					<tr>
 						<td align="left" style="padding-top:10px">
-							<h4>Step1: <span style="font-weight:normal;">You have created a database named "<b>Orangescrum</b>". But you have no tables in that database. Get the "<b>database.sql</b>" file from the root directory and import that to your database.</span></h4>
+							<h4>Step1: <span style="font-weight:normal;">You have created a database named "<b>COMPANY_NAME</b>". But you have no tables in that database. Get the "<b>database.sql</b>" file from the root directory and import that to your database.</span></h4>
 							<h4 style="margin-bottom:0">Step2: <span style="font-weight:normal;">Provide the following details of SMTP configuration options in `app/Config/constants.php`</span>
 							<ul>
 								<li>SMTP_UNAME</li>
@@ -156,8 +156,8 @@ if(trim($settings['database']) == "") {
 							<h4 style="margin:0">Note:
 								<span style="font-weight:normal;">At any point you can change your database credentials in `app/Config/database.php` page.</span>
 							</h4>
-							<h4><span style="font-weight:normal;">For more information please visit <a href="http://www.orangescrum.org/general-installation-guide" target="_blank">Installation Guide</a>.</span></h4>
-						</td>
+							<!--<h4><span style="font-weight:normal;">For more information please visit <a href="http://www.COMPANY_NAME.org/general-installation-guide" target="_blank">Installation Guide</a>.</span></h4>
+						--></td>
 					</tr>
 					<tr>
 						<td align="center">
@@ -181,7 +181,7 @@ if(trim($settings['database']) == "") {
 	<head>
 		<meta name="robots" content="noindex,nofollow" />
 		<link rel="shortcut icon" href="images/favicon_new.ico"/>
-		<title>Orangescrum Setup Wizard</title>
+		<title>COMPANY_NAME Setup Wizard</title>
 		<style>
 		*{
 			padding:5;
@@ -203,12 +203,12 @@ if(trim($settings['database']) == "") {
 				<table cellpadding="8" cellspacing="8" style="border:1px solid #999999;color:#000000" align="center" width="520px">
 					<tr>
 						<td align="center" style="border-bottom:1px solid #999999">
-							<h3 style="color:#245271">4 simple steps to get started with Orangescrum</h3>
+							<h3 style="color:#245271">4 simple steps to get started with COMPANY_NAME</h3>
 						</td>
 					</tr>
 					<tr>
 						<td align="left" style="padding-top:10px">
-							<h4>Step1: <span style="font-weight:normal;">Create a new MySQL database  named "<b>orangescrum</b>"(`utf8_unicode_ci` collation)</span></h4>
+							<h4>Step1: <span style="font-weight:normal;">Create a new MySQL database  named "<b>COMPANY_NAME</b>"(`utf8_unicode_ci` collation)</span></h4>
 							<h4>Step2: <span style="font-weight:normal;">Update your database password in DATABASE_CONFIG section of `app/Config/database.php` page</span></h4>
 							<h4>Step3: <span style="font-weight:normal;">Get the database.sql file from the root directory and import that to your database</span></h4>
 							<h4 style="margin-bottom:0">Step4: <span style="font-weight:normal;">Provide the following details of SMTP configuration options in `app/Config/constants.php`</span>
@@ -225,8 +225,8 @@ if(trim($settings['database']) == "") {
 							<h4 style="margin:0">Note:
 								<span style="font-weight:normal;">At any point you can change your database credentials in `app/Config/database.php` page.</span>
 							</h4>
-							<h4><span style="font-weight:normal;">For more information please visit <a href="http://www.orangescrum.org/general-installation-guide" target="_blank">Installation Guide</a>.</span></h4>
-						</td>
+							<!--<h4><span style="font-weight:normal;">For more information please visit <a href="http://www.COMPANY_NAME.org/general-installation-guide" target="_blank">Installation Guide</a>.</span></h4>
+						--></td>
 					</tr>
 					<tr>
 						<td align="center">

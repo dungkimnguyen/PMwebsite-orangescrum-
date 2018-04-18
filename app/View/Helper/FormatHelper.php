@@ -111,7 +111,7 @@ class FormatHelper extends AppHelper {
 	{
 		$value = stripslashes(trim($value));
 		$value = str_replace("“","\"",$value);
-        $value = str_replace("”","\"",$value);
+        $value = str_replace("�?","\"",$value);
 		$value = str_replace("�","\"",$value);
 		$value = str_replace("�","\"",$value);
 		//$value = preg_replace('/[^(\x20-\x7F)\x0A]*/','', $value);
@@ -177,7 +177,7 @@ class FormatHelper extends AppHelper {
 		/* commented for supporting multi language
 		
 		$value = str_replace("“","\"",$value);
-        $value = str_replace("”","\"",$value);
+        $value = str_replace("�?","\"",$value);
 		$value = str_replace("�","\"",$value);
 		$value = str_replace("�","\"",$value);
 		$value = preg_replace('/[^(\x20-\x7F)\x0A]/','', $value);
@@ -189,7 +189,7 @@ class FormatHelper extends AppHelper {
 		return $value;*/
 		
 		$value = str_replace("“","\"",$value);
-		$value = str_replace("”","\"",$value);
+		$value = str_replace("�?","\"",$value);
 		$value = str_replace("�","\"",$value);
 		$value = str_replace("�","\"",$value);
 		$value = stripslashes($value);
@@ -345,7 +345,7 @@ class FormatHelper extends AppHelper {
 		 $ext = substr(strrchr($oldname, "."), 1);
 		 
 		 if($link == 1) {
-		     if(isset($downloadUrl) && trim($downloadUrl)){ //By Orangescrum
+		     if(isset($downloadUrl) && trim($downloadUrl)){ //By COMPANY_NAME
 			 $links1 = "<a href='".$downloadUrl."' target='_blank' style='font:bold 11px verdana;text-transform:uppercase;color:#000000'>";
 		     }else{
 			$links1 = "<a href='".HTTP_ROOT."easycases/download/".$filename."' style='font:bold 11px verdana;text-transform:uppercase;color:#000000'>";
@@ -577,7 +577,7 @@ function generateTemporaryURL($resource){
           $signature = urlencode(base64_encode((hash_hmac("sha1",utf8_encode($string),$awsSecretKey,TRUE))));
           //echo $expires."=====";echo $signature;
           return "{$resource}?AWSAccessKeyId={$awsAccessKey}&Signature={$signature}&Expires={$expires}";
-          //https://s3.amazonaws.com/orangescrum-dev/files/case_files/1.jpg?AWSAccessKeyId=AKIAJAVFGWOGKGBOWPWQ&Signature=gZ90JslqYADtRK6haMVR9e2guko%3D&Expires=1360239119
+          //https://s3.amazonaws.com/COMPANY_NAME-dev/files/case_files/1.jpg?AWSAccessKeyId=AKIAJAVFGWOGKGBOWPWQ&Signature=gZ90JslqYADtRK6haMVR9e2guko%3D&Expires=1360239119
      }
      function convert_ascii($string){ 
 	// Replace Single Curly Quotes

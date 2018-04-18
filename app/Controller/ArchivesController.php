@@ -1,7 +1,7 @@
 <?php
 /*********************************************************************************
- * Orangescrum Community Edition is a web based Project Management software developed by
- * Orangescrum. Copyright (C) 2013-2014
+ * COMPANY_NAME Community Edition is a web based Project Management software developed by
+ * COMPANY_NAME. Copyright (C) 2013-2014
  *
  * This program is free software; you can redistribute it and/or modify it under
  * the terms of the GNU General Public License version 3 as published by the
@@ -20,8 +20,8 @@
  * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
  * 02110-1301 USA.
  *
- * You can contact Orangescrum, 2059 Camden Ave. #118, San Jose, CA - 95124, US. 
-   or at email address support@orangescrum.com.
+ * You can contact COMPANY_NAME, 2059 Camden Ave. #118, San Jose, CA - 95124, US. 
+   or at email address support@COMPANY_NAME.com.
  *
  * The interactive user interfaces in modified source and object code versions
  * of this program must display Appropriate Legal Notices, as required under
@@ -29,9 +29,9 @@
  *
  * In accordance with Section 7(b) of the GNU General Public License version 3,
  * these Appropriate Legal Notices must retain the display of the "Powered by
- * Orangescrum" logo. If the display of the logo is not reasonably feasible for
+ * COMPANY_NAME" logo. If the display of the logo is not reasonably feasible for
  * technical reasons, the Appropriate Legal Notices must display the words
- * "Powered by Orangescrum".
+ * "Powered by COMPANY_NAME".
  ********************************************************************************/
 App::uses('AppController', 'Controller');
 class ArchivesController extends AppController {

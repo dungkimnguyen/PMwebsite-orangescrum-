@@ -12,16 +12,16 @@
 					    <p>
 						Hi <?php echo $Name; ?>,                    
 					    </p>
-					    <p>We've received a request to change the email address associated with your Orangescrum account. Please click the button below to confirm this email address. After confirmation, this will be your Login email address of Orangescrum.</p>
+					    <p>We've received a request to change the email address associated with your COMPANY_NAME account. Please click the button below to confirm this email address. After confirmation, this will be your Login email address of COMPANY_NAME.</p>
 					    <a style="font-weight:bold; text-decoration:none;" href="<?php echo HTTP_APP . 'users/emailUpdate/' . $qstr; ?>" target='_blank'><div style="display:block; max-width:100% !important; width:auto !important;margin:auto; height:auto !important;background-color:#0EA426;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px;border-radius:10px;color:#ffffff;font-size:16px;text-align:center">Confirm email address</div></a>
 					    
 					    <br/>
 					    <p>If you didn't request an email change, please ignore this email.</p>
                         <br/>
-					    <p>If you have any questions, please write us at <a href='mailto:support@orangescrum.com'>support@orangescrum.com</a>, we will be happy to help you.</p>
+					    <p>If you have any questions, please write us at <a href='mailto:support@COMPANY_NAME.com'>support@COMPANY_NAME.com</a>, we will be happy to help you.</p>
 					    <br/>
 					    <p>Regards,<br/>
-				               The Orangescrum Team</p>
+				               The COMPANY_NAME Team</p>
 					</td>
 				    </tr>
 				</table>
@@ -33,11 +33,11 @@
 					    <?php
 						if ($existing_user) {
 						?>
-    						You are receiving this email notification because you have subscribed to Orangescrum, to unsubscribe, please email with subject 'Unsubscribe' to <a href='mailto:support@orangescrum.com'>support@orangescrum.com</a>
+    						You are receiving this email notification because you have subscribed to COMPANY_NAME, to unsubscribe, please email with subject 'Unsubscribe' to <a href='mailto:support@COMPANY_NAME.com'>support@COMPANY_NAME.com</a>
 						    <?php
 						} else {
 						    ?>
-    						Your email address is used to invite you on Orangescrum. If you didn't intend to do this, just ignore this email; no account has been created yet.
+    						Your email address is used to invite you on COMPANY_NAME. If you didn't intend to do this, just ignore this email; no account has been created yet.
 						    <?php
 						}
 						?>

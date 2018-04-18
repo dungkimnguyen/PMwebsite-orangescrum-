@@ -8,7 +8,7 @@ class TypeCompany extends AppModel {
     * Getting selected task types
     * 
     * @method getSelTypes
-    * @author Orangescrum
+    * @author COMPANY_NAME
     * @return
     * @copyright (c) Aug/2014, Andolsoft Pvt Ltd.
     */
@@ -20,7 +20,7 @@ class TypeCompany extends AppModel {
     * Getting all task types
     * 
     * @method getTypes
-    * @author Orangescrum
+    * @author COMPANY_NAME
     * @return
     * @copyright (c) Aug/2014, Andolsoft Pvt Ltd.
     */

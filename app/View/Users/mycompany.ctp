@@ -14,7 +14,7 @@
 	    </td>
         </tr>
         <?php /* ?><tr>
-            <th>Orangescrum URL:</th>
+            <th>COMPANY_NAME URL:</th>
             <td>
 		<?php echo $this->Form->text('secsite',array('value'=>HTTP_ROOT,'name'=>'securesite', 'class'=>'form-control','id'=>'secsite','autocomplete'=>'off','disabled'=>'disabled')); ?>
 	    </td>

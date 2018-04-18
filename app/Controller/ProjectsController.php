@@ -1,7 +1,7 @@
 <?php
 /*********************************************************************************
- * Orangescrum Community Edition is a web based Project Management software developed by
- * Orangescrum. Copyright (C) 2013-2014
+ * COMPANY_NAME Community Edition is a web based Project Management software developed by
+ * COMPANY_NAME. Copyright (C) 2013-2014
  *
  * This program is free software; you can redistribute it and/or modify it under
  * the terms of the GNU General Public License version 3 as published by the
@@ -20,8 +20,8 @@
  * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
  * 02110-1301 USA.
  *
- * You can contact Orangescrum, 2059 Camden Ave. #118, San Jose, CA - 95124, US. 
-   or at email address support@orangescrum.com.
+ * You can contact COMPANY_NAME, 2059 Camden Ave. #118, San Jose, CA - 95124, US. 
+   or at email address support@COMPANY_NAME.com.
  *
  * The interactive user interfaces in modified source and object code versions
  * of this program must display Appropriate Legal Notices, as required under
@@ -29,9 +29,9 @@
  *
  * In accordance with Section 7(b) of the GNU General Public License version 3,
  * these Appropriate Legal Notices must retain the display of the "Powered by
- * Orangescrum" logo. If the display of the logo is not reasonably feasible for
+ * COMPANY_NAME" logo. If the display of the logo is not reasonably feasible for
  * technical reasons, the Appropriate Legal Notices must display the words
- * "Powered by Orangescrum".
+ * "Powered by COMPANY_NAME".
  ********************************************************************************/
 
 App::uses('AppController', 'Controller');
@@ -1827,13 +1827,13 @@ function get_type_id($type){
  */
 	function download_sample_csvfile(){
 		//$myFile ='demo_sample_milestone_csv_file.csv';
-		$myFile ='Orangescrum_Import_Task_Sample.csv';
+		$myFile ='COMPANY_NAME_Import_Task_Sample.csv';
 		header('HTTP/1.1 200 OK');
         header('Cache-Control: no-cache, must-revalidate');
         header("Pragma: no-cache");
         header("Expires: 0");
         header("Content-type: text/csv");
-        header("Content-Disposition: attachment; filename=Orangescrum_Task_Sample.csv");
+        header("Content-Disposition: attachment; filename=COMPANY_NAME_Task_Sample.csv");
         readfile(CSV_PATH."task_milstone/". $myFile);
         exit;
 	}
@@ -2032,7 +2032,7 @@ function project_thumb_view(){
 			$projUniqId = $prjArr['Project']['uniq_id'];
 		}
 		
-		$subject = "You have been added to ".$projName." on Orangescrum";
+		$subject = "You have been added to ".$projName." on COMPANY_NAME";
 
 		$this->Email->delivery = EMAIL_DELIVERY;
 		$this->Email->to = $to_email;      
@@ -2058,7 +2058,7 @@ function project_thumb_view(){
     * Showing and Managing task types by company owner
     * 
     * @method task_type
-    * @author Orangescrum
+    * @author COMPANY_NAME
     * @return
     * @copyright (c) Aug/2014, Andolsoft Pvt Ltd.
     */
@@ -2088,7 +2088,7 @@ function project_thumb_view(){
     * Add new task types by company owner
     * 
     * @method addNewTaskType
-    * @author Orangescrum
+    * @author COMPANY_NAME
     * @return
     * @copyright (c) Aug/2014, Andolsoft Pvt Ltd.
     */
@@ -2140,7 +2140,7 @@ function project_thumb_view(){
     * Save selected task types by company owner
     * 
     * @method saveTaskType
-    * @author Orangescrum
+    * @author COMPANY_NAME
     * @return
     * @copyright (c) Aug/2014, Andolsoft Pvt Ltd.
     */
@@ -2167,7 +2167,7 @@ function project_thumb_view(){
     * Delete task types by company owner
     * 
     * @method deleteTaskType
-    * @author Orangescrum
+    * @author COMPANY_NAME
     * @return boolean
     * @copyright (c) Aug/2014, Andolsoft Pvt Ltd.
     */

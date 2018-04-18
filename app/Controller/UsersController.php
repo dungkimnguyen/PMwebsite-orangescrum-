@@ -1,7 +1,7 @@
 <?php
 /*********************************************************************************
- * Orangescrum Community Edition is a web based Project Management software developed by
- * Orangescrum. Copyright (C) 2013-2014
+ * COMPANY_NAME Community Edition is a web based Project Management software developed by
+ * COMPANY_NAME. Copyright (C) 2013-2014
  *
  * This program is free software; you can redistribute it and/or modify it under
  * the terms of the GNU General Public License version 3 as published by the
@@ -20,8 +20,8 @@
  * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
  * 02110-1301 USA.
  *
- * You can contact Orangescrum, 2059 Camden Ave. #118, San Jose, CA - 95124, US. 
-   or at email address support@orangescrum.com.
+ * You can contact COMPANY_NAME, 2059 Camden Ave. #118, San Jose, CA - 95124, US. 
+   or at email address support@COMPANY_NAME.com.
  *
  * The interactive user interfaces in modified source and object code versions
  * of this program must display Appropriate Legal Notices, as required under
@@ -29,9 +29,9 @@
  *
  * In accordance with Section 7(b) of the GNU General Public License version 3,
  * these Appropriate Legal Notices must retain the display of the "Powered by
- * Orangescrum" logo. If the display of the logo is not reasonably feasible for
+ * COMPANY_NAME" logo. If the display of the logo is not reasonably feasible for
  * technical reasons, the Appropriate Legal Notices must display the words
- * "Powered by Orangescrum".
+ * "Powered by COMPANY_NAME".
  ********************************************************************************/
 App::uses('AppController', 'Controller');
 App::import('Vendor', 'oauth');
@@ -44,7 +44,7 @@ class UsersController extends AppController {
 	}
 	function beforeRender() {
 	    if($this->Auth->User("id")) {
-		$withOutLoginPage = array('login','license','validate_emailurl','forgotpassword','session_maintain');
+		$withOutLoginPage = array('index','login','license','validate_emailurl','forgotpassword','session_maintain');
 		if(in_array($this->action,$withOutLoginPage)){
 		    $file = ""; $caseid = "";
 		    if(isset($_GET['case'])) {
@@ -619,10 +619,10 @@ class UsersController extends AppController {
 			
 			$ext_user = '';
 			if (!$getUser['User']['password']) {
-				$subject = $fromName." Invited you to join ".$comp['Company']['name']." on Orangescrum";
+				$subject = $fromName." Invited you to join ".$comp['Company']['name']." on COMPANY_NAME";
 				$ext_user = 1;
 			} else {
-				$subject = $fromName." Invited you to join on Orangescrum";
+				$subject = $fromName." Invited you to join on COMPANY_NAME";
 			}
 			
 			$this->Email->delivery = EMAIL_DELIVERY;
@@ -795,7 +795,7 @@ class UsersController extends AppController {
 				$to = $getData['User']['email'];
 				$newPasswrod = $this->Format->generatePassword(6);
 
-				$subject = "Orangescrum Reset Password";
+				$subject = "COMPANY_NAME Reset Password";
 				$message = "<table cellspacing='1' cellpadding='1'  width='100%' border='0'>
 									<tr><td>&nbsp;</td></tr>
 									<tr><td align='left' style='font:normal 14px verdana;'>Hi " . $name . ",</td></tr>
@@ -1047,10 +1047,10 @@ class UsersController extends AppController {
 									
 									$ext_user = '';
 									if(@$findEmail['User']['id']) {
-										$subject = $fromName." invited you to join ".$comp['Company']['name']." on Orangescrum";
+										$subject = $fromName." invited you to join ".$comp['Company']['name']." on COMPANY_NAME";
 										$ext_user = 1;              			
 									}else {
-										$subject = $fromName." invited you to join Orangescrum";
+										$subject = $fromName." invited you to join COMPANY_NAME";
 									}
 									
 									$this->Email->delivery = EMAIL_DELIVERY;
@@ -1191,10 +1191,10 @@ class UsersController extends AppController {
 
 								$ext_user = '';
 								if(@$findEmail['User']['id']) {
-									$subject = $fromName." invited you to join ".$comp['Company']['name']." on Orangescrum";
+									$subject = $fromName." invited you to join ".$comp['Company']['name']." on COMPANY_NAME";
 									$ext_user = 1;              			
 								}else {
-									$subject = $fromName." invited you to join Orangescrum";
+									$subject = $fromName." invited you to join COMPANY_NAME";
 								}			
 
 								$this->Email->delivery = EMAIL_DELIVERY;
@@ -1386,7 +1386,12 @@ class UsersController extends AppController {
 		$this->set('page',$page);
 		$this->set('type',$type);
 	}
-    public function login($demo = NULL,$email= NULL,$pass= NULL,$first_login=0) {
+        
+        function index(){
+           $this->layout='';
+        }
+
+        public function login($demo = NULL,$email= NULL,$pass= NULL,$first_login=0) {
 		$gdata = '';
 
 		
@@ -1571,6 +1576,7 @@ class UsersController extends AppController {
 			}
 		}
 		$this->set("rightpath",$rightpath);
+                $this->set("page",$demo);
 	}
 	function lunchuser(){
 		if(isset($_GET['sig']) && trim($_GET['sig'])) {
@@ -1755,7 +1761,7 @@ class UsersController extends AppController {
 		    $qstr = $user['User']['update_random'];
 		    $to = $upd_email;
 		    $Name = $user['User']['name'];						
-		    $subject = "Orangescrum Login Email ID Confirmation";
+		    $subject = "COMPANY_NAME Login Email ID Confirmation";
 		    $this->Email->delivery = EMAIL_DELIVERY;
 		    $this->Email->to = $to;  
 		    $this->Email->subject = $subject;
@@ -2650,7 +2656,7 @@ class UsersController extends AppController {
 	}
 	
 	/*
-	 * @author Orangescrum
+	 * @author COMPANY_NAME
 	 * @method setClient
 	 * @return an object of google.
 	 */
@@ -2678,7 +2684,7 @@ class UsersController extends AppController {
 	}
 	
 	/*
-	 * @author Orangescrum
+	 * @author COMPANY_NAME
 	 * @method googleConnect
 	 * @return a token.
 	 */
@@ -2724,7 +2730,7 @@ class UsersController extends AppController {
 	}
 	
 	/*
-	 * @author Orangescrum
+	 * @author COMPANY_NAME
 	 * @method setClientForConnect
 	 * @return an object of google.
 	 */
@@ -2888,7 +2894,7 @@ class UsersController extends AppController {
 						$Company = ClassRegistry::init('Company');
 						$comp = $Company->find('first', array('fields' => array('Company.id', 'Company.name', 'Company.uniq_id')));
 						
-						$subject = $fromName." invited you to join ".$comp['Company']['name']." on Orangescrum";
+						$subject = $fromName." invited you to join ".$comp['Company']['name']." on COMPANY_NAME";
 						
 						$this->Email->delivery = EMAIL_DELIVERY;
 						$this->Email->to = $to;  
@@ -3272,10 +3278,10 @@ function done_cropimage(){
 		$multiple = 0;
 		if(stristr($pjnames,",")) {
 			$multiple = 1;
-			$subject = "You have been added to multiple projects on Orangescrum";
+			$subject = "You have been added to multiple projects on COMPANY_NAME";
 		}
 		else {
-			$subject = "You have been added to ".$pjnames." on Orangescrum";
+			$subject = "You have been added to ".$pjnames." on COMPANY_NAME";
 		}
 		
 		$this->Email->delivery = EMAIL_DELIVERY;
@@ -3349,6 +3355,10 @@ function done_cropimage(){
 	$subScription = $this->Subscription->find('first', array('conditions' => array('Subscription.plan' => $plan_id)));
 
 	if ($this->request->data && $name && $email && $company) {
+            if($this->User->find('all', array('conditions' => array('User.email' => $email)))){
+              $message = 'Email Already Exist';  
+            }
+            else{
 	    $comp['Company']['uniq_id'] = $this->Format->generateUniqNumber();
 	    $comp['Company']['seo_url'] = $this->Format->makeSeoUrl($seo_url);
 	    $comp['Company']['subscription_id'] = $subScription['Subscription']['id'];
@@ -3452,7 +3462,7 @@ function done_cropimage(){
 				//here send email to user uncomment.
 				/*$to = $email;
 				$from = FROM_EMAIL;
-				$subject = "Welcome to Orangescrum, " . ucfirst($name) . "!";
+				$subject = "Welcome to COMPANY_NAME, " . ucfirst($name) . "!";
 				$activation_url = PROTOCOL . $comp['Company']['seo_url'] . "." . DOMAIN . "users/confirmation/" . $activation_id;
 				$web_address = PROTOCOL . $comp['Company']['seo_url'] . "." . DOMAIN;
 				$this->Email->delivery = EMAIL_DELIVERY;
@@ -3477,6 +3487,7 @@ function done_cropimage(){
 			}
 		    }
 		}
+        }
 	} else {
 	    $message = 'Error in Creating Company';
 	}
@@ -3494,7 +3505,7 @@ function done_cropimage(){
 		$this->loadModel('CompanyUser');
 		$this->CompanyUser->delete($companyUid);
 	    }
-	     $msg['message'] = 'Error in Creating Company';
+	     $msg['message'] = $message;//'Error in Creating Company';
 	}	
 	echo json_encode($msg);
 	exit;

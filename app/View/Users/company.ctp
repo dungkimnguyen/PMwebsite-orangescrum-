@@ -17,7 +17,7 @@
 													You are currently using <font style="color:#EB592A;">
 													<b>
 													 <?php 
-														echo "Orangescrum ".$GLOBALS['plan_types'][$user_subscription['subscription_id']]." &nbsp;&nbsp;&nbsp;";
+														echo "COMPANY_NAME ".$GLOBALS['plan_types'][$user_subscription['subscription_id']]." &nbsp;&nbsp;&nbsp;";
 														if($user_subscription['subscription_id']<4){
 															echo "<a href='".HTTP_ROOT."pricing'>Upgrade Now!</a>&nbsp;&nbsp;&nbsp;";
 														}

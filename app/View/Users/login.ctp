@@ -36,90 +36,37 @@ input#txt_Password{font-family: Arial}
         }
     }
 </script>
-<div class="top_m_cont_land">
+<div class="top_m_cont_land"  style=" background-color: #884bdf">
     <div class="wrapper_new">
         <div style="display:table-cell; height:100%; min-height:100%; vertical-align:middle">
             <div style="position:relative; z-index:9;">
                 <div class="bg_logo_inner" style="top:-100px;left:-180px"></div>
-                <div class="logo_landing">
-                    <a href="<?php echo HTTPS_HOME; ?>"><img src="<?php echo HTTP_ROOT; ?>img/images/logo_outer.png?v=<?php echo RELEASE; ?>"  border="0" alt="Orangescrum.com" title="Orangescrum.com"/></a>
-                    <?php
-					if(!$findCompany['Company']['id']) {
-						?>
-                        <h4>Welcome to Orangescrum Community Edition v1.6.1</h4>
-                        <div style="color:#666;background:#F0F0F0;font-size:13px;padding:5px 10px;text-align:left;font-family:'Courier New', Courier, monospace;border:1px dashed #FF7E00;">
-                        Make sure that, <br/>
-                        <ul>
-                       	<li>You have write permission (777) to <b>`app/tmp`</b> and <b>`app/webroot`</b> folders</li>
-                        
-                        <?php
-						if(!defined('SMTP_PWORD') || SMTP_PWORD == "******") { ?>
-                        <li>You have provided the details of <b>SMTP</b> email sending options in <b>`app/Config/constants.php`</b></li>
-<?php
-						}
-						?><li>You have updated FROM_EMAIL_NOTIFY and SUPPORT_EMAIL in <b>`app/Config/constants.php`</b></li>
-						
-                        </ul>
-                        </div>
-                        <?php
-					}
-					else {
-						/*$pos = strpos(SUB_FOLDER, '/');
-						if ($pos === false) {
-							echo '<ul><li style="color:red;">Replace the SUB_FOLDER name as "'.SUB_FOLDER.'/" istead of "'.SUB_FOLDER.'" in the constants.php</li></ul>';
-						}*/
-					?>
-					<div style="padding:10px 5px;">
-						<div style="clear:both"></div>
-						<div style="float:left"><a href="https://www.orangescrum.com/how-it-works" target="_blank">How it Works?</a></div>
-						<div style="float:right;padding-right:10px;"><a href="https://www.orangescrum.com/help" target="_blank">Help!</a></div>
-					</div>
-					<?php
-					}
-					?>
+                <div class="logo_landing" style="color:white; font-size:40px;">
+
+                    <img src="<?php echo HTTP_ROOT; ?>img/images/logo_def1.png"  border="0" alt="COMPANY_NAME.com" title="COMPANY_NAME.com" width="80%"/>
+<!--<h4>Welcome to COMPANY_NAME Community Edition v0.1</h4>-->
                 </div>
-                <div class="login_table">
+                <div class="login_table" style="background-color:#884bdf">
                     <div style="height:100%;display:table; width:100%;">
 
                         <div id="container" style="display:table-cell; vertical-align:middle">
 							
                             <div class="">
                                 <div class="fl" style="right:0px; left:-8px;">
-									<?php if(!$rightpath) { ?>
+									
 										<style>
 										.cake-error {
 											display:none;
 										}
 										</style>
-										<div style="color:#FF0000;font-size:14px;text-align:center;">
-											Update <b>SUB_FOLDER</b> in <b>app/Config/constants.php</b> to <b>define('SUB_FOLDER', '<?php echo $sub_folder; ?>/');</b>
-											<br/>
-											<?php
-											if(SUB_FOLDER) {
-												echo "Make sure that, the '<b>.htaccess</b>' file is there in the root directory";
-											}
-											?>
-										</div>
-									<?php 
-									}
-									else {
-									?>
+										
+								
                                     <div class="login_box">
-                                        <h2 style="font-size:22px;">
-                                            <?php
-                                            if($findCompany['Company']['id']) {
-                                                echo "Login to your Account";
-                                                $action = "/login";
-                                            }
-                                            else {
-                                                echo "Quick Signup";
-                                                $action = "/login";
-                                            }
-                                            ?>
-                                       </h2>
+                                        <h2 style="font-size:22px; color: #5b32b4; " class="signinCls">Login to your Account</h2>
+                                       <h2 style="font-size:22px; display:none; color: #5b32b4;" class="signupCls">Quick Signup</h2>
                                        <div><img src="<?php echo HTTP_ROOT; ?>img/images/login_header_shadow.png?v=<?php echo RELEASE; ?>" width="460" height="8"/></div>
                                         
-                                        <?php echo $this->Form->create('User', array('id'=>'userLoginForm','action' => $action)); ?>
+                                        <?php echo $this->Form->create('User', array('id'=>'userLoginForm','action' => "/login")); ?>
 										<input type="hidden" name="data[User][timezone_id]" id="timezone_id" value="">
                                        
                                         <div class="login_dialog top_inc_app_land_from" id="login_dialog" style="margin-top:0px;">
@@ -151,36 +98,34 @@ input#txt_Password{font-family: Arial}
 						?>
                                             </div>
 
-											 <?php
-                                            if(!$findCompany['Company']['id']) {
-                                             ?>
-                                                 <label class="lbl_ie">Company Name</label>
-												<?php echo $this->Form->text('company', array('size' => '30', 'class' => 'textbox', 'placeholder' => 'Company Name', 'title' => 'Company Name', 'id' => 'company', 'style' => 'background:#fff')); ?>
-
+					<div style="display:none;" class="signupCls">
+                                                 
+                                        <?php echo $this->Form->text('company', array('size' => '30', 'class' => 'textbox', 'placeholder' => 'Company Name', 'title' => 'Company Name', 'id' => 'company','style' => 'background:#fff; padding-left:35px;background-image:url('.HTTP_ROOT.'img/building.png); background-repeat:no-repeat; background-position: left; ')); ?>
+</div>
                                             </div>
-                                            <?php
-                                            }
-                                            ?>
+                                          
                                             
                                             <label class="lbl_ie">Email ID</label>
-                                            <?php echo $this->Form->text('email', array('size' => '30', 'class' => 'textbox', 'placeholder' => 'Email ID', 'title' => 'Email ID', 'id' => 'email', 'style' => 'background:#fff')); ?>
+
+                                           <?php echo $this->Form->text('email', array('size' => '30', 'class' => 'textbox email', 'placeholder' => 'Email ID', 'title' => 'Email ID', 'id' => 'email', 
+'style' => 'background:#fff; padding-left:35px;background-image:url('.HTTP_ROOT.'img/email.png); background-repeat:no-repeat; background-position: left; ')); ?>
 
                                             <label class="lbl_ie">Password</label>
-                                            <?php echo $this->Form->password('password', array('size' => '30', 'class' => 'textbox', 'placeholder' => 'Password', 'title' => 'Password', 'id' => 'password')); ?>
+                                            <?php echo $this->Form->password('password', array('size' => '30', 'class' => 'textbox', 'placeholder' => 'Password', 'title' => 'Password', 'id' => 'password' ,'style' => 'background:#fff; padding-left:35px;background-image:url('.HTTP_ROOT.'img/key.png); background-repeat:no-repeat; background-position: left; ')); ?>
                                             <div class="gap10"></div>
                                             
-                                            <?php
-                                            if($findCompany['Company']['id']) {
-                                             ?>
-                                            <div style="margin-left:20px; margin-top:4px;">
+                                          
+                                            <div style="margin-left:20px; margin-top:4px;" class="signinCls">
                                                 <input type="checkbox" name="data[User][remember_me]" id="chk_Rem" class="auto" value="1" style="cursor:pointer; border:none"/>
                                                 <span class="rem_posn" style="color:#666;">Remember me</span>
+   <div style=" float:right;" class="fl signinCls">
+                                                <a href="<?php echo HTTP_ROOT; ?>users/forgotpassword" class="forgot_pwd" style="color: #5b32b4;">Forgot Password?</a></div>
                                             </div>
                                             <div class="gap10"></div>
                                             <div>
-                                                <div style="margin-top:0px; margin-left:20px;" class="fl">
+                                                <div style="margin-top:0px; margin-left:20px;" class="fl signinCls">
                                                     <input type="hidden" value="" name="case_details" id="case_details" />
-                                                    <button type="submit" value="Save" name="submit_Pass" id="submit_Pass" class="btn btn_blue">Login</button> <!--Or &nbsp;-->
+                                                    <button type="submit" value="Save" name="submit_Pass" id="submit_Pass" class="btn submit-btn">Login</button> <!--Or &nbsp;-->
 
                                                 <?php
                                                 if (isset($_GET['project'])) {
@@ -201,40 +146,36 @@ input#txt_Password{font-family: Arial}
                                                     ?>
 
                                                 </div>
-                                                <div style="margin-left:10px;margin-top:10px;margin-bottom:20px;" class="fl or_cancel"><a href="<?php echo HTTP_ROOT; ?>users/forgotpassword" class="forgot_pwd">Forgot Password?</a></div>
-                                                <?php
-                                                }
-                                                else {
-                                                ?>
-                                                <div class="gap10"></div>
-                                                <div style="margin-top:0px; margin-left:20px;" class="fl">
-                                                By signing up you you agree that you have read, understand, and accept the <b><a href="<?php echo HTTP_ROOT; ?>license" style="color:#FF0000;margin:0;">License</a></b>
+                                             
+                                               <span style="float:right;margin-top:20px;" class="fl signinCls"><a href="javascript:void(0)" onclick="signupPanel();" style="color: #5b32b4;">Don't have an account</a></span>
+                                                <div class="gap10 "></div>
+                                                <div style="color: #726a84;font-size: 12px;font-weight: 300;margin-top:0px; margin-left:20px; display:none;" class="fl signupCls">
+                                                By signing up you are agree that you have read, understand, and accept the <b><a href="#" style="color:#FF0000;margin:0;">License</a></b>
                                                 <br/><br/>
-                                                <button type="button" value="Signup" name="submit_button" id="submit_button" class="btn btn_blue" onclick="return validateForm()">Signup</button>
+                                                <button style="float:left;" type="button" value="Signup" name="submit_button" id="submit_button" class="btn submit-btn" onclick="return validateForm()">Signup</button>
+
+                                                <span style="float:right;margin-top:20px;" class="fl signupCls"><a href="javascript:void(0)" onclick="signinPanel();" style="color: #5b32b4;">Already have an Account</a></span>
                                                 <img src="<?php echo HTTP_ROOT."img/images/case_loader2.gif"; ?>" id="submit_loader" style="display:none;"/>
+
                                                 <div class="gap10"></div>
                                                 </div>
-                                                <?php
-                                                }
-                                                ?>
+                                                
                                                 <div class="cb"></div>
                                                 <?php echo $this->Form->end(); ?>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="cb"></div>
-                                    <div style="padding:20px 0;text-align:center">
-                                    	<a href="https://groups.google.com/forum/#!forum/orangescrum-community-support" target="_blank" style="margin:0;"><img src="<?php echo HTTP_ROOT."img/google_groups.jpg"; ?>"/></a>
+                                  <!--  <div style="padding:20px 0;text-align:center">
+                                    	<a href="https://groups.google.com/forum/#!forum/COMPANY_NAME-community-support" target="_blank" style="margin:0;"><img src="<?php echo HTTP_ROOT."img/google_groups.jpg"; ?>"/></a>
                                         <br/>
-                                    	You can ask for help, share your ideas, contribute to the community edition and also let us know your feedback using the <a href="https://groups.google.com/forum/#!forum/orangescrum-community-support" target="_blank" style="margin:0;">Orangescrum's Google Group</a>.
+                                    	You can ask for help, share your ideas, contribute to the community edition and also let us know your feedback using the <a href="https://groups.google.com/forum/#!forum/COMPANY_NAME-community-support" target="_blank" style="margin:0;">COMPANY_NAME's Google Group</a>.
                                         
-                                    </div>
+                                    </div>-->
                                 </div>
                             </div>
                             <div class="cb"></div>
-							<?php
-							}
-							?>
+							
                         </div>
 
                     </div>
@@ -247,12 +188,30 @@ input#txt_Password{font-family: Arial}
 </div>
 </div>
 <input type="hidden" name="pageurl" id="pageurl" value="<?php echo HTTP_ROOT; ?>" size="1" readonly="true"/>
-
-<?php
-if(!$findCompany['Company']['id']) {
- ?>
 <script>
+<?php if($page =='new'){?>
+$(".signupCls").show();
+$(".signinCls").hide();
+$("#email").css({"border":"1px solid #D4D4D4"});
+$("#password").css({"border":"1px solid #D4D4D4"});
+$("#company").css({"border":"1px solid #D4D4D4"});
+<?php }?>
+function signupPanel(){
+$(".signupCls").show();
+$(".signinCls").hide();
+$("#email").css({"border":"1px solid #D4D4D4"});
+$("#password").css({"border":"1px solid #D4D4D4"});
+$("#company").css({"border":"1px solid #D4D4D4"});
+}function signinPanel(){
+$(".signupCls").hide();
+$(".signinCls").show();
+$("#email").css({"border":"1px solid #D4D4D4"});
+$("#password").css({"border":"1px solid #D4D4D4"});
+$("#company").css({"border":"1px solid #D4D4D4"});
+}
+
     function validateForm() {
+
 	var error_flag =1;
 	var name = '';
 	var email =$.trim($("#email").val());
@@ -298,6 +257,8 @@ if(!$findCompany['Company']['id']) {
 		    $('#userLoginForm').submit();
 		}else{
 		    alert(data.message);
+                    $("#submit_button").show();
+                    $("#submit_loader").hide();
 		}
 	    },'json');
 	   
@@ -305,4 +266,3 @@ if(!$findCompany['Company']['id']) {
         }
 }
 </script>
-<?php } ?>

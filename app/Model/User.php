@@ -393,7 +393,7 @@ class User extends AppModel{
     
     /**
      * @Method: Public keepPassChk($uid) Check users logged in different browsers and logged out if some one changes the password
-     * @author PRB <support@orangescrum.com>
+     * @author PRB <support@COMPANY_NAME.com>
      * @return array 
      */
     function keepPassChk($uid) {

@@ -106,9 +106,9 @@ if( $is_active_proj || (SES_TYPE==3)){
 		  </ul>
 		<?php } ?>
 	  <ul class="nav navbar-nav navbar-left navbar-user" <?php if(PAGE_NAME == "help") { ?>style="margin-left:0px;"<?php } ?>>
-		<li class="dropdown alerts-dropdown help_a">
-		  <a href="https://www.orangescrum.com/help" target="_blank"><i class="menu_sprite_ico menu_sprite_help" title="Help &amp; Support"></i><span class="ipad_txt" >Help &amp; Support</span></a>
-		</li>
+<!--		<li class="dropdown alerts-dropdown help_a">
+		  <a href="https://www.COMPANY_NAME.com/help" target="_blank"><i class="menu_sprite_ico menu_sprite_help" title="Help &amp; Support"></i><span class="ipad_txt" >Help &amp; Support</span></a>
+		</li>-->
         <li class="dropdown user-dropdown user_gt">
         	<a href="<?php echo HTTP_ROOT.'getting_started';?>" title="Getting Started">
         	<div class="fl get_icon"></div>

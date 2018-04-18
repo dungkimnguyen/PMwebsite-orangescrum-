@@ -16,7 +16,7 @@ $(document).ready(function()
 
 <?php
 if($AuthId) {
-	echo "<div style='color:#FF0000'>Please logout from Orangescrum and click on the same button from your Email to accept the Invitation.</div>";
+	echo "<div style='color:#FF0000'>Please logout from COMPANY_NAME and click on the same button from your Email to accept the Invitation.</div>";
 }
 else {
 ?>
@@ -27,8 +27,8 @@ else {
         	<div style="position:relative">
             	<div class="bg_logo_inner"></div>
                 <div class="logo_landing"> 
-                        <a href="<?php echo HTTP_HOME; ?>"><img src="<?php echo HTTP_ROOT; ?>img/images/logo_outer.png"  border="0" alt="Orangescrum.com" title="Orangescrum.com"/></a>
-                </div>
+                        <!--<a href="<?php echo HTTP_HOME; ?>"><img src="<?php echo HTTP_ROOT; ?>img/images/logo_def1.png"  border="0" alt="COMPANY_NAME.com" title="COMPANY_NAME.com"/></a>
+                --></div>
     <div class="login_table">
         <div <?php if(PAGE_NAME == "home") { ?>class="home" <?php } else { ?>class="home_other" <?php } ?> style="height:100%;display:table">
             <!--<td style="vertical-align:middle; height:100%">-->

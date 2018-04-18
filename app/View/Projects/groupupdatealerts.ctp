@@ -63,7 +63,9 @@
             <li>You have a distributed team, every tasks can not be captured, you just want your team send daily update, just set it here and sit back.</li>
             <li>Automate daily updates from your team.</li>
         </ul>
-        <div><img src="<?php echo HTTP_IMAGES; ?>os_mail_new1.jpg" style="width:100%;height:100%"/></div>
+        <div>
+            <!--<img src="<?php echo HTTP_IMAGES; ?>os_mail_new1COMPANY_NAME.jpg" style="width:100%;height:100%"/>-->
+            </div>
     </div>
 </div>
 <div class="cbt"></div>

@@ -28,6 +28,7 @@ echo $this->Html->css('google-font');
 echo $this->Html->css('chromatron-red_admin.css?v='.RELEASE);
 echo $this->Html->css('multiautocomplete');
 echo $this->Html->css('osadmin');
+echo $this->Html->css('style');
 ?>
 <!--script type="text/javascript" src="<?php echo JS_PATH; ?>jquery/jquery.min.1.5.1.js"></script--> 
 <script type="text/javascript" src="<?php echo JS_PATH; ?>jquery-1.7.2.min.js"></script> 

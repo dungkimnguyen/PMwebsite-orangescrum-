@@ -53,8 +53,8 @@
 	var domain_set = '';
 	if(window.location.host.match(/easyagile.us/g)){
 	    domain_set = '.easyagile.us';
-	}else if(window.location.host.match(/orangescrum.com/g)){
-	    domain_set = '.orangescrum.com';
+	}else if(window.location.host.match(/COMPANY_NAME.com/g)){
+	    domain_set = '.COMPANY_NAME.com';
 	}else if(window.location.host.match(/orangeprabhu.com/g)){
 	    domain_set = '.orangeprabhu.com';
 	}

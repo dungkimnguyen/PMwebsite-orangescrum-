@@ -6,13 +6,13 @@
 <![endif]-->
 <?php if(isset($passemail) && !empty($passemail)){}else{$passemail='10';}?>
 <?php if(isset($chkemail) && !empty($chkemail)){$chkemail='10';}else{$chkemail='11';}?>
-<div class="top_m_cont_land">
+<div class="top_m_cont_land"  style="background-color:#884bdf">
     <div id="wrapper">
     	<div style="display:table-cell; height:100%; min-height:100%; vertical-align:middle">
         	<div style="position:relative">
             	<div class="bg_logo_inner"></div>
-                <div class="logo_landing"> 
-                    <a href="<?php echo HTTPS_HOME; ?>"><img src="<?php echo HTTP_ROOT; ?>img/images/logo_outer.png?v=<?php echo RELEASE; ?>"  border="0" alt="Orangescrum.com" title="Orangescrum.com"/></a>
+                <div class="logo_landing" style="color:white; font-size:40px;"> 
+                   <a href="<?php echo HTTPS_HOME; ?>"><img src="<?php echo HTTP_ROOT; ?>img/images/logo_def1.png"  border="0" alt="COMPANY_NAME.com" title="COMPANY_NAME.com" width="80%"/></a>
                 </div>
                 <div class="login_box">
                     <div class="login_dialog" id="login_dialog">
@@ -25,13 +25,14 @@
                                         <table cellspacing="0" cellpadding="0" border="0" width="100%">
                                             <tr>
                                                 <td style="width:100%; vertical-align:middle">
-                                                    <h2>Forgot your password?</h2>
+                                                    <h2 style="color: #5b32b4;font-size:22px; color: #5b32b4; ">Forgot your password?</h2>
                                                     <div><img src="<?php echo HTTP_ROOT; ?>img/images/login_header_shadow.png?v=<?php echo RELEASE; ?>" width="460" height="8"/></div>
                                                 </td>
                                             </tr> 
                                             <tr>
                                               <td>
-                                              	<h6>To reset your password, type the full email address you use to sign in to your Orangescrum Account.</h6>
+                                                  <p style="color: #726a84;font-size: 16px;font-weight: 300;margin-top: 0;" >
+                                                      To reset your password, type the full email address you use to sign in to your COMPANY_NAME Account.</p>
                                               </td>
                                             </tr>
                                                 <td align="center">
@@ -41,7 +42,7 @@
                                             <tr>
                                             <td>
 												<label class="lbl_ie">Email ID</label>
-                                                <?php echo $this->Form->text('email',array('size'=>'60','id'=>'email','maxlength'=>'100','placeholder'=>'Email ID','title'=>'Email ID','class'=>'textbox')); ?>
+                                                <?php echo $this->Form->text('email',array('size'=>'60','id'=>'email','maxlength'=>'100','placeholder'=>'Email ID','title'=>'Email ID','class'=>'textbox email','style' => 'background:#fff; padding-left:35px;background-image:url('.HTTP_ROOT.'img/email.png); background-repeat:no-repeat; background-position: left; ')); ?>
                                             </td>
                                             </tr>
                                             <tr >
@@ -51,9 +52,10 @@
                                                     <input type="hidden" id="user_id" name="user_id" value="<?php if(isset($user_id)) { echo $user_id; } ?>" readonly="true">
                                                     <div id="fgpass">
                                                         <div class="fl" style="margin-left:20px; margin-top:10px;">
-                                                            <button type="submit" value="Submit" name="submit_pwd"class="btn btn_blue" style="cursor:pointer">Submit</button>
-                                                            <span class="or_cancel">or<a href="<?php echo HTTP_ROOT; ?>users/login">Cancel</a></span>
-                                                        </div>
+                                                            <button type="submit" value="Submit" name="submit_pwd"class="btn submit-btn" style="cursor:pointer">Submit</button>
+                                                             </div>
+                                                        <a href="<?php echo HTTP_ROOT; ?>users/login"  style="color: #5b32b4; float: right; margin-top:25px;margin-right:25px;">Cancel</a>
+                                                       
                                                         <div class="cb"></div>
                                                     </div>
                                                     <div class="cb"></div>

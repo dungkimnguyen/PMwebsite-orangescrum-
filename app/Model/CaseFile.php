@@ -4,7 +4,7 @@ class CaseFile extends AppModel{
 /**
 	 * This method calculate the total storage used by user.
 	 * 
-	 * @author Orangescrum
+	 * @author COMPANY_NAME
 	 * @method getStorage
 	 * @param
 	 * @return string

@@ -4,7 +4,7 @@
 	<div class="col-lg-5 ft_lt_div" id="csTotalHours">
 	</div>
 	<div class="col-lg-2 text-centre ft_md_div">
-	Orangescrum <?php echo VERSION; ?>
+	COMPANY_NAME <?php echo VERSION; ?>
 	</div>
 	<div class="col-lg-5 text-right rht_ft_txt ft_rt_div" id="projectaccess">
 	
@@ -12,9 +12,9 @@
     
     <div style="clear:both"></div>
     <div style="text-align:center;padding:10px 0 0 0;">
-    <a href="https://groups.google.com/forum/#!forum/orangescrum-community-support" target="_blank" style="margin:0;"><img src="<?php echo HTTP_ROOT."img/google_groups.jpg"; ?>" style="width:100px;"/></a>
+   <!-- <a href="https://groups.google.com/forum/#!forum/COMPANY_NAME-community-support" target="_blank" style="margin:0;"><img src="<?php echo HTTP_ROOT."img/google_groups.jpg"; ?>" style="width:100px;"/></a> -->
     <br/>
-    You can ask for help, share your ideas, contribute to the community edition and also let us know your feedback using the <a href="https://groups.google.com/forum/#!forum/orangescrum-community-support" target="_blank" style="margin:0;">Orangescrum's Google Group</a>.
+   <!-- You can ask for help, share your ideas, contribute to the community edition and also let us know your feedback using the <a href="https://groups.google.com/forum/#!forum/COMPANY_NAME-community-support" target="_blank" style="margin:0;">COMPANY_NAME's Google Group</a>-->
     </div>
 </footer>
 <!-- Footer ends -->  
@@ -37,7 +37,7 @@ var PROJECTS = <?php echo json_encode($GLOBALS['getallproj']); ?>;
 var defaultAssign = '<?php echo $defaultAssign; ?>';
 var dassign;
 var TASKTMPL = <?php echo json_encode($GLOBALS['getTmpl']); ?>;
-var SITENAME = 'Orangescrum';
+var SITENAME = 'COMPANY_NAME';
 var TITLE_DLYUPD = '<?php echo "Daily Update - ".date("m/d"); ?>';
 </script>
 
@@ -154,7 +154,7 @@ function subscribeClient(){
 				$('#pubnub_notf').html(counter+' '+ tsk +' '+msg);
 				$("#pubnub_notf").slideDown("1000");
 				//if (window.webkitNotifications) {
-					notify(getImNotifyMsg(projShName, caseNum, caseTtl, caseTyp),'Orangescrum.com');
+					notify(getImNotifyMsg(projShName, caseNum, caseTtl, caseTyp),'COMPANY_NAME.com');
 				//}
 			}
 			

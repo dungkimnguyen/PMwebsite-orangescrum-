@@ -16,8 +16,12 @@ define("EMAIL_DELIVERY", "smtp");
 //Gmail SMTP
 define("SMTP_HOST", "ssl://smtp.gmail.com");
 define("SMTP_PORT", "465");
-define("SMTP_UNAME", "youremail@gmail.com");
-define("SMTP_PWORD", "******");
+define("SMTP_UNAME", "nubecons@gmail.com");
+define("SMTP_PWORD", "123456");
+// userdefinde constants 
+define("COMPANY_NAME", "NubeCons");
+define("COMPANY_TEXT", "Company Text");
+
 //https://www.arclab.com/en/amlc/list-of-smtp-and-imap-servers-mailserver-list.html (Get the list of Host names)
 
 ### OR ###
@@ -43,13 +47,13 @@ define("SMTP_PWORD", "******");
 */
 
 ########################################################################
-define("WEB_DOMAIN", "YourDomain.com"); //ex. demo.orangescrum.com
-define('FROM_EMAIL_NOTIFY', 'notify@mycompany.com'); //(REQUIRED)
-define('SUPPORT_EMAIL', 'support@mycompany.com'); //(REQUIRED) From Email
-define('FROM_EMAIL',  'Orangescrum<'.SUPPORT_EMAIL.'>');
+define("WEB_DOMAIN", "nubecons.com"); //ex. demo.COMPANY_NAME.com
+define('FROM_EMAIL_NOTIFY', 'info@nubecons.com'); //(REQUIRED)
+define('SUPPORT_EMAIL', 'support@nubecons.com'); //(REQUIRED) From Email
+define('FROM_EMAIL',  'COMPANY_NAME<'.SUPPORT_EMAIL.'>');
 
-define("DEV_EMAIL", 'developer@mycompany.com'); // Developer Email ID to report the application error
-define('EMAIL_SUBJ', '[Orangescrum]');
+define("DEV_EMAIL", 'developer@nubecons.com'); // Developer Email ID to report the application error
+define('EMAIL_SUBJ', '[COMPANY_NAME]');
 
 // If you have not yet set up the Nohup cronjob, leave it blank
 define('EMAIL_REPLY', "<div style='font-family:Arial;font-size:14px;color:#787878;margin-bottom:5px;'>Just REPLY to this Email the same will be added under the Task. <br/><span style='font-size:11px;'><b>NOTE:</b> Do not remove this original message.</span></div>");
@@ -57,11 +61,11 @@ define('EMAIL_REPLY', "<div style='font-family:Arial;font-size:14px;color:#78787
 define('RELEASE',1); //Increase the release version on every CSS/JS changes to remove the browser cache
 
 ##################### Domain and URL Constants ############################
-define('SUB_FOLDER', '@SUB_FOLDER'); //If your application URL followed by a folder name like: http://your-site.com/folder_name, put your folder name as 'folder_name/'
+define('SUB_FOLDER', 'scrum/'); //If your application URL followed by a folder name like: http://your-site.com/folder_name, put your folder name as 'folder_name/'
 
 if(php_sapi_name() === "cli") {
 	define('PROTOCOL', "http://");
-	define('DOMAIN', "www.my-orangescrum.com/"); // Please set your application domain (REQUIRED)
+	define('DOMAIN', "www.my-COMPANY_NAME.com/"); // Please set your application domain (REQUIRED)
 }else{
 	$ht = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS']=='on')?"https://":"http://";
 	define('PROTOCOL', $ht);

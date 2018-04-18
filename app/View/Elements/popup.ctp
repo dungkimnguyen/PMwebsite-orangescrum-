@@ -936,22 +936,22 @@
     <!-- Remove tasks from Template popup ends --> 
 	 
 	<?php if((SES_TYPE == 1 || SES_TYPE == 2) && defined('TWITTED') && TWITTED == 0 && !in_array(PAGE_NAME,array('onbording','profile','changepassword','email_notifications','email_reports'))){
-		$osTwAccount = 'TheOrangescrum';
+		$osTwAccount = 'TheCOMPANY_NAME';
 		$tweetTexts = array(
-			'#Orangescrum is an Awesome Project Collaboration Tool that gives full visibility and control over your projects',
-			'Organize Projects, Tasks, Documents & Meeting Minutes in one place #Orangescrum'.' @'.$osTwAccount,
-			'Share of your ideas, feedbacks, questions and discussions across the team #Orangescrum'.' @'.$osTwAccount,
-			'See what\'s in progress, what needs to be done and what\'s been accomplished #Orangescrum'.' @'.$osTwAccount,
-			'Receive reminders, alert for close deadlines, manage tightly not to exceed budget #Orangescrum'.' @'.$osTwAccount,
-			'Break-down tasks into smaller ones, share documents using google Drive & Dropbox #Orangescrum'.' @'.$osTwAccount,
-			'Just sit back and keep on watching the Activity even while relaxing #Orangescrum'.' @'.$osTwAccount,
-			'Win your customers\'confidence by keeping them informed with daily scrum #Orangescrum'.' @'.$osTwAccount,
-			'Keep your team on their toes by reminding them by automatic emails #Orangescrum'.' @'.$osTwAccount,
-			'Get instant notification on your cell and respond with your inputs in no time #Orangescrum'.' @'.$osTwAccount,
-			'Stay on top and get weekly usage report #Orangescrum'.' @'.$osTwAccount,
-			'Managing Project Effectively with project collaboration tool taming inbox #Orangescrum'.' @'.$osTwAccount,
-			'Get Daily Progress email from team without fail #Orangescrum'.' @'.$osTwAccount,
-			'#Orangescrum is a Awesome project management tool for You & Your Team'.' @'.$osTwAccount
+			'#COMPANY_NAME is an Awesome Project Collaboration Tool that gives full visibility and control over your projects',
+			'Organize Projects, Tasks, Documents & Meeting Minutes in one place #COMPANY_NAME'.' @'.$osTwAccount,
+			'Share of your ideas, feedbacks, questions and discussions across the team #COMPANY_NAME'.' @'.$osTwAccount,
+			'See what\'s in progress, what needs to be done and what\'s been accomplished #COMPANY_NAME'.' @'.$osTwAccount,
+			'Receive reminders, alert for close deadlines, manage tightly not to exceed budget #COMPANY_NAME'.' @'.$osTwAccount,
+			'Break-down tasks into smaller ones, share documents using google Drive & Dropbox #COMPANY_NAME'.' @'.$osTwAccount,
+			'Just sit back and keep on watching the Activity even while relaxing #COMPANY_NAME'.' @'.$osTwAccount,
+			'Win your customers\'confidence by keeping them informed with daily scrum #COMPANY_NAME'.' @'.$osTwAccount,
+			'Keep your team on their toes by reminding them by automatic emails #COMPANY_NAME'.' @'.$osTwAccount,
+			'Get instant notification on your cell and respond with your inputs in no time #COMPANY_NAME'.' @'.$osTwAccount,
+			'Stay on top and get weekly usage report #COMPANY_NAME'.' @'.$osTwAccount,
+			'Managing Project Effectively with project collaboration tool taming inbox #COMPANY_NAME'.' @'.$osTwAccount,
+			'Get Daily Progress email from team without fail #COMPANY_NAME'.' @'.$osTwAccount,
+			'#COMPANY_NAME is a Awesome project management tool for You & Your Team'.' @'.$osTwAccount
 		);
 		if($user_subscription['is_free']==1 || ($user_subscription['project_limit'] == 'Unlimited' && $user_subscription['storage'] == 'Unlimited')){
 			$twHead = 'Tweet about us!';

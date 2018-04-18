@@ -6239,7 +6239,7 @@ ManageMilestoneList = function(mlsttype,search_key){
     }
 }
 function trackclick(msg){
-    if(SITENAME =='Orangescrum.com'){
+    if(SITENAME =='COMPANY_NAME.com'){
         console.log("Google Track Event: "+msg);
         _gaq.push(['_trackEvent', 'Help and Support', msg , msg]);
     }

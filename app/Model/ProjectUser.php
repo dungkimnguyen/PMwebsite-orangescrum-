@@ -16,7 +16,7 @@ class ProjectUser extends AppModel {
     /**
      * This method gets the user's detail
      * 
-     * @author Orangescrum
+     * @author COMPANY_NAME
      * @method getAllNotifyUser
      * @params number, array, string
      * @return array of user's detail

@@ -5,10 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 <link rel="shortcut icon" href="<?php echo HTTP_ROOT; ?>favicon.ico"/>
 <meta name="robots" content="noindex,nofollow" />
-<title>Orangescrum</title>
+<title>COMPANY_NAME</title>
 <?php 
 echo $this->Html->meta('icon'); 
 echo $this->Html->css('style_outer.css?v='.RELEASE);
+echo $this->Html->css('style');
 ?>
 <script type="text/javascript">
     var PROTOCOL = '<?php echo PROTOCOL;?>';

@@ -8,7 +8,7 @@ class Type extends AppModel {
     * Listing of task types
     * 
     * @method getAllTypes
-    * @author Orangescrum
+    * @author COMPANY_NAME
     * @return
     * @copyright (c) Aug/2014, Andolsoft Pvt Ltd.
     */
@@ -30,7 +30,7 @@ class Type extends AppModel {
     * Listing of default task types
     * 
     * @method getDefaultTypes
-    * @author Orangescrum
+    * @author COMPANY_NAME
     * @return
     * @copyright (c) Aug/2014, Andolsoft Pvt Ltd.
     */

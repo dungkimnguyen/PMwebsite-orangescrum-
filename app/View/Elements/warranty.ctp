@@ -18,16 +18,14 @@
 	</div>
 	
 	<div class="what_feature fl wt_fl_320">
-	<a href="http://blog.orangescrum.com/2014/01/announcing-open-source-warranty-on-orangescrum.html" target="_blank" onclick="opensource_ga()" style="color:#333333;border:none;outline:none"><img  src="<?php echo HTTP_ROOT; ?>img/ftr_3.png?v=<?php echo RELEASE; ?>" alt="" width="43px" height="66px" /></a><br/>
-	<a href="http://blog.orangescrum.com/2014/01/announcing-open-source-warranty-on-orangescrum.html" target="_blank" onclick="opensource_ga()" style="color:#333333"><h4>Open Source Warranty</h4></a>
-	There will be no nasty surprises.<br/>In case of any ceased activity, Orangescrum will be released as open-source for our customers.
+	There will be no nasty surprises.<br/>In case of any ceased activity, COMPANY_NAME will be released as open-source for our customers.
 	</div>
 </div>
 <div class="cb"></div>
 <script>
 function opensource_ga(){
 		console.log('Opensource Warranty');
-	  <?php if(stristr($_SERVER['SERVER_NAME'],"orangescrum.com")){?>
+	  <?php if(stristr($_SERVER['SERVER_NAME'],"COMPANY_NAME.com")){?>
 			
 			_gaq.push(['_trackEvent', 'Opensource', 'Warranty', 'Opensource Warranty']);
 	  <?php } ?>	

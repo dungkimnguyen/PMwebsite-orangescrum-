@@ -7,7 +7,7 @@ class CaseUserEmail extends AppModel {
     /**
      * This method filters the ids
      * 
-     * @author Orangescrum
+     * @author COMPANY_NAME
      * @method getEmailUsers
      * @params number
      * @return array of users id
