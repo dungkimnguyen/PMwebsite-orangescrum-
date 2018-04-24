@@ -1,44 +1,4 @@
 <?php
-/*********************************************************************************
- * COMPANY_NAME Community Edition is a web based Project Management software developed by
- * COMPANY_NAME. Copyright (C) 2013-2014
- *
- * This program is free software; you can redistribute it and/or modify it under
- * the terms of the GNU General Public License version 3 as published by the
- * Free Software Foundation with the addition of the following permission added
- * to Section 15 as permitted in Section 7(a): FOR ANY PART OF THE COVERED WORK
- * IN WHICH THE COPYRIGHT IS OWNED BY SUGARCRM, SUGARCRM DISCLAIMS THE WARRANTY
- * OF NON INFRINGEMENT OF THIRD PARTY RIGHTS.
- *
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
- * details.
- *
- * You should have received a copy of the GNU General Public License along with
- * this program; if not, see http://www.gnu.org/licenses or write to the Free
- * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
- * 02110-1301 USA.
- *
- * You can contact COMPANY_NAME, 2059 Camden Ave. #118, San Jose, CA - 95124, US. 
-   or at email address support@COMPANY_NAME.com.
- *
- * The interactive user interfaces in modified source and object code versions
- * of this program must display Appropriate Legal Notices, as required under
- * Section 5 of the GNU General Public License version 3.
- *
- * In accordance with Section 7(b) of the GNU General Public License version 3,
- * these Appropriate Legal Notices must retain the display of the "Powered by
- * COMPANY_NAME" logo. If the display of the logo is not reasonably feasible for
- * technical reasons, the Appropriate Legal Notices must display the words
- * "Powered by COMPANY_NAME".
- ********************************************************************************/
-/*********************************************************************************
- * Description:  Defines the Cron jobs for all CLI actions
- * Portions created by COMPANY_NAME are Copyright (C) COMPANY_NAME.
- * All Rights Reserved.
- ********************************************************************************/
- 
 App::uses('AppController', 'Controller');
 App::import('Vendor', 's3', array('file' => 's3'.DS.'S3.php'));
 class CronController extends AppController{
@@ -284,25 +244,25 @@ class CronController extends AppController{
 				if($usr['UserNotification']['value'] == 1) {
 					$sb_title = 'Daily Task Status Updates';
 					if($sub) {
-						$subject = $sub." Tasks on COMPANY_NAME - ".date("m/d",strtotime(GMT_DATE));
+						$subject = $sub." Tasks on ".COMPANY_NAME." - ".date("m/d",strtotime(GMT_DATE));
 					} else {
-						$subject = 'COMPANY_NAME Daily Task Status - '.date("m/d",strtotime(GMT_DATE));
+						$subject = ''.COMPANY_NAME.' Daily Task Status - '.date("m/d",strtotime(GMT_DATE));
 					}
 				}
 				elseif($usr['UserNotification']['value'] == 2) {
 					$sb_title = 'Weekly Task Status Updates';
 					if($sub) {
-						$subject = $sub." on COMPANY_NAME - ".date("m/d",strtotime($upto))." - ".date("m/d",strtotime(GMT_DATE));
+						$subject = $sub." on ".COMPANY_NAME." - ".date("m/d",strtotime($upto))." - ".date("m/d",strtotime(GMT_DATE));
 					} else {
-						$subject = 'COMPANY_NAME Weekly Task Status - '.date("m/d",strtotime($upto))." - ".date("m/d",strtotime(GMT_DATE));
+						$subject = ''.COMPANY_NAME.' Weekly Task Status - '.date("m/d",strtotime($upto))." - ".date("m/d",strtotime(GMT_DATE));
 					}
 				}
 				elseif($usr['UserNotification']['value'] == 3) {
 					$sb_title = 'Monthly Task Status Updates';
 					if($sub) {
-						$subject = $sub." on COMPANY_NAME - ".date("m/d",strtotime($upto))." - ".date("m/d",strtotime(GMT_DATE));
+						$subject = $sub." on ".COMPANY_NAME." - ".date("m/d",strtotime($upto))." - ".date("m/d",strtotime(GMT_DATE));
 					} else {
-						$subject = 'COMPANY_NAME Monthly Task Status - '.date("m/d",strtotime($upto))." - ".date("m/d",strtotime(GMT_DATE));
+						$subject = ''.COMPANY_NAME.'s Monthly Task Status - '.date("m/d",strtotime($upto))." - ".date("m/d",strtotime(GMT_DATE));
 					}
 				}
 				
@@ -359,7 +319,7 @@ class CronController extends AppController{
 							</tr>
 							<tr>
 								<td align='left' style='font:10px Arial;padding-top:2px;color:#737373'>
-									You are receiving this email notification because you have subscribed to COMPANY_NAME Task Status E-mail notification, to unsubscribe, please click <a href='".HTTP_ROOT."users/email_notifications' target='_blank'>Unsubscribe Email Notification</a>
+									You are receiving this email notification because you have subscribed to ".COMPANY_NAME." Task Status E-mail notification, to unsubscribe, please click <a href='".HTTP_ROOT."users/email_notifications' target='_blank'>Unsubscribe Email Notification</a>
 								</td>	  
 							</tr>
 						</table>";
@@ -513,9 +473,8 @@ class CronController extends AppController{
 					$sub = $totaloverDueCases;
 				}
 				$taskduedt = $this->Format->dateFormatReverse($tmzone->GetDateTime($usr['User']['timezone_id'],$timezn['Timezone']['gmt_offset'],$timezn['Timezone']['dst_offset'],$timezn['Timezone']['code'],$gmt_datetime,"date"));
-				//$subject = "COMPANY_NAME Task Due notification: ".$this->Format->dateFormatReverse($tmzone->GetDateTime($usr['User']['timezone_id'],$timezn['Timezone']['gmt_offset'],$timezn['Timezone']['dst_offset'],$timezn['Timezone']['code'],$gmt_datetime,"date"));
 				
-				$subject = $sub." on COMPANY_NAME - ".date("m/d",strtotime($taskduedt));
+				$subject = $sub." on ".COMPANY_NAME." - ".date("m/d",strtotime($taskduedt));
 				$message = "<table cellpadding='0' cellspacing='0' align='left' width='100%'>
 								
 								<tr style='height:25px;'><td>&nbsp;</td></tr>
@@ -542,7 +501,7 @@ class CronController extends AppController{
 								</tr>
 								<tr>
 									<td align='left' style='font:10px Arial;padding-top:2px;color:#737373'>
-									You are receiving this email notification because you have subscribed to COMPANY_NAME, to unsubscribe, please click <a href='".HTTP_ROOT."users/email_notifications' target='_blank'>Unsubscribe Email Notification</a>
+									You are receiving this email notification because you have subscribed to ".COMPANY_NAME.", to unsubscribe, please click <a href='".HTTP_ROOT."users/email_notifications' target='_blank'>Unsubscribe Email Notification</a>
 								</td>
 								</tr>
 							</table>";
@@ -737,7 +696,7 @@ class CronController extends AppController{
 						$message = "<tr><td><table style='border-collapse:collapse;border-spacing:0;text-align:left;width:600px;border:1px solid #5191BD'>
 								<tr style='background:#5191BD;height:50px;'>
 									<td style='font:bold 14px Arial;padding:10px;color:#FFFFFF;'>
-										<span style='font-size:18px;'>COMPANY_NAME</span> - Daily Task Updates
+										<span style='font-size:18px;'>".COMPANY_NAME."</span> - Daily Task Updates
 									</td>
 								</tr>
 								<tr>
@@ -746,9 +705,9 @@ class CronController extends AppController{
 									</td>
 								</tr>
 								<tr>
-									<td align='left' style='font:14px Arial;padding:10px;border-top:1px solid #E1E1E1'>
+									<td align='left' style='font:14px Arial;padsding:10px;border-top:1px solid #E1E1E1'>
 										Thanks,<br/>
-										Team COMPANY_NAME
+										Team ".COMPANY_NAME."
 									</td>	  
 								</tr>
 							</table></td></tr>
@@ -909,7 +868,7 @@ class CronController extends AppController{
 			$lastDate = gmdate('Y-m-d');
 			$frmdt = date("m/d/Y",  (strtotime($dateCurnt)-(7*24*60*60)));
 			$todt = date("m/d/Y",  strtotime($dateCurnt)-(24*60*60));
-			$subject = "COMPANY_NAME Usage Report ".$frmdt." - ".$todt;
+			$subject = "".COMPANY_NAME." Usage Report ".$frmdt." - ".$todt;
 			$header ='<div style="font-family:verdana;font-size:12px;color:#333;padding:0;margin:0;border:1px solid #ccc;float:left;width:600px;">
 			<div style="background:#555555;padding:5px 10px;margin-bottom:15px;">
 				<div style="float:left;color:#FFF;font-size:26px;font-weight:bold;">'.ucfirst($val['Company']['name']).'</div>
@@ -1252,7 +1211,7 @@ class CronController extends AppController{
 			</ul>
 		</div><br/>';	
 				$message .="</div></div>";
-				$message .="<div style='clear:both'></div><div style='font-size:11px;padding-top:10px;color:#737373'>Don't want to receive this email?<br/>Go to the COMPANY_NAME <a href='".HTTP_ROOT."users/email_notifications'>notification settings</a> and say NO to <b>Weekly Usage Report</b></div>";
+				$message .="<div style='clear:both'></div><div style='font-size:11px;padding-top:10px;color:#737373'>Don't want to receive this email?<br/>Go to the ".COMPANY_NAME." <a href='".HTTP_ROOT."users/email_notifications'>notification settings</a> and say NO to <b>Weekly Usage Report</b></div>";
 				$mail_body = $message_top.$header.$statistics_div.$message;
                                 $to =$val['User']['email'];
                                 $mail_body = $message_top.$header.$statistics_div.$message;

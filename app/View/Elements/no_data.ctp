@@ -47,7 +47,7 @@ if ($nodata_name == 'caselist') {
 	<div><?php echo $msgDesc; ?></div>
 <?php if ($nodata_name == 'milestonelist') {?>
 	<div style="padding-top:10px;">
-		<button class="btn btn_blue" value="Add" type="button" onclick="addEditMilestone(this);" style="margin:0;">
+		<button class="btn submit-btn" value="Add" type="button" onclick="addEditMilestone(this);" style="margin:0;">
 			Create Milestone
 		</button>
 	</div>

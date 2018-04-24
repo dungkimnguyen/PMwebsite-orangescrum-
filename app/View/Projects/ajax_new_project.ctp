@@ -110,7 +110,7 @@
     		    <img src="<?php echo HTTP_IMAGES; ?>images/case_loader2.gif" alt="Loader"/>
     		</span>
     		<span id="btn">
-    		    <button type="button" value="Create" name="crtProject" class="btn btn_blue" onclick="return projectAdd('txt_Proj','txt_shortProj','loader','btn');"><i class="icon-big-tick"></i>Create</button>
+    		    <button type="button" value="Create" name="crtProject" class="btn submit-btn" onclick="return projectAdd('txt_Proj','txt_shortProj','loader','btn');"><i class="icon-big-tick"></i>Create</button>
 		    <button class="btn btn_grey" type="button" onclick="closePopup();"><i class="icon-big-cross"></i>Cancel</button>
     		</span>
 		    <?php

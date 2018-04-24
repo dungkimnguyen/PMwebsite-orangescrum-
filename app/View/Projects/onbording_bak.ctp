@@ -85,7 +85,7 @@
                     You can respond to the task Email sent from notify@COMPANY_NAME.com.
                 </li>
                 <li>
-                    Your Email response will be posted on COMPANY_NAME against that task.
+                    Your Email response will be posted on <?php echo COMPANY_NAME?> against that task.
                 </li>
                 <li>
                     Respond on a task even on-the-go from your mobile via Email.
@@ -104,7 +104,7 @@
             <div class="get_title"><?php echo $this->Html->link('Timezone & Profile','/users/profile',array('class'=>'get_title'));?></div>
             <ul style="padding:5px 15px;margin-top:0px;">
                 <li>
-                    Personalize your COMPANY_NAME account by setting up your Profile details and Timezone.
+                    Personalize your <?php echo COMPANY_NAME?> account by setting up your Profile details and Timezone.
                 </li>
                 <li>
                     The Timezone settings help you to keep stay up-to-date while working with a virtual or remote team.
@@ -125,7 +125,7 @@
                     The Email Notification is set to "No" by default, to get email those email only when selected when task is posted.
                 </li>
                 <li>
-                    Set to "Yes", to get all the Task related Emails from all your assigned projects from COMPANY_NAME.
+                    Set to "Yes", to get all the Task related Emails from all your assigned projects from <?php echo COMPANY_NAME?>.
                 </li>
                 <li>
                     You can enable or disable Google Chrome Desktop Notification on the â€œNotificationâ€? page.

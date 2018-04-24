@@ -11,7 +11,7 @@
 	<tr>
 		<td align="right">
 			<div id="edit_btn<?php echo $caseinfo['id'];?>" class="fr">
-				<button type="button" value="Save" style="margin:5px;padding:3px 32px 3px 32px;" class="btn btn_blue" onclick="<?php if($reply_flag){?>save_editedvalue_reply<?php }else{?>save_editedvalue<?php }?>(<?php echo $caseinfo['case_no'];?>,<?php echo $caseinfo['id'];?>,<?php echo $proj_id;?>,'<?php echo $caseinfo['uniq_id'];?>');" ><i class="icon-big-tick"></i>Save</button>
+				<button type="button" value="Save" style="margin:5px;padding:3px 32px 3px 32px;" class="btn submit-btn" onclick="<?php if($reply_flag){?>save_editedvalue_reply<?php }else{?>save_editedvalue<?php }?>(<?php echo $caseinfo['case_no'];?>,<?php echo $caseinfo['id'];?>,<?php echo $proj_id;?>,'<?php echo $caseinfo['uniq_id'];?>');" ><i class="icon-big-tick"></i>Save</button>
 				<button type="reset" style="margin:5px;padding:3px 32px 3px 32px;" class="btn btn_grey" onclick="<?php if($reply_flag){?>cancel_editor_reply<?php }else{?>cancel_editor<?php }?>(<?php echo $caseinfo['id'];?>);"><i class="icon-big-cross"></i>Cancel</button>
 			</div>
 			<div id="edit_loader<?php echo $caseinfo['id'];?>" class="fr loading" style="display:none;margin:6px;" title="Loading"></div>

@@ -536,7 +536,7 @@ if(showQuickAct && taskTyp.id != 10){
 				<div class="col-lg-12 m-top-20">
 					<div class="fl lbl-font16 lbl_cs_det"></div>
 					<span id="postcomments<%= csAtId %>">
-						<button class="btn btn_blue" type="button" name="data[Easycase][postdata]" onclick="return validateComments(<%= '\''+csAtId+'\',\''+csUniqId+'\',\''+csLgndRep+'\',\''+SES_TYPE+'\',\''+csProjIdRep+'\'' %>);"><i class="icon-big-tick"></i>Post</button>
+						<button class="btn submit-btn" type="button" name="data[Easycase][postdata]" onclick="return validateComments(<%= '\''+csAtId+'\',\''+csUniqId+'\',\''+csLgndRep+'\',\''+SES_TYPE+'\',\''+csProjIdRep+'\'' %>);"><i class="icon-big-tick"></i>Post</button>
                         <span class="or_cancel">or</span>
 						<button class="task_detail_back or_cancel" type="reset" id="rset"><i class="icon-big-cross"></i>Cancel</button>
 					</span>
@@ -608,7 +608,7 @@ if(showQuickAct && taskTyp.id != 10){
 				</div>
 				<div class="cb"></div>
 				<div class="col-lg-12 m-top-20">				
-					<button class="btn btn_blue" type="submit"><i class="icon-big-tick"></i>Post</button>
+					<button class="btn submit-btn" type="submit"><i class="icon-big-tick"></i>Post</button>
 					<button class="btn btn_grey" type="reset" id="rset" onclick="closePopup();"><i class="icon-big-cross"></i>Cancel</button>
 					<a href="javascript:jsVoid();" onclick="slide_form_more();"><div class="fr mor_toggle">More Options<b class="caret"></b></div></a>
 					<a href="javascript:jsVoid();" onclick="slide_form_less();"><div class="fr less_toggle" style="display:none">Less Options<b class="caret"></b></div></a>

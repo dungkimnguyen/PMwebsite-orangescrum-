@@ -21,8 +21,8 @@ $autorefreshflag =0;
 ?>
 <div class="steps_os">
 	<div class="steps_usr">
-		<h1 style="color: #428BCA;">Welcome <?php echo USERNAME; ?>!<br/> Get started with your COMPANY_NAME account</h1>
-		<h6 style="color: #D67866;font-size: 17px;">You're just 3 simple steps away from exploring COMPANY_NAME!</h6>
+		<h1 style="color: #428BCA;">Welcome <?php echo USERNAME; ?>!<br/> Get started with your <?php echo COMPANY_NAME ?> account</h1>
+		<h6 style="color: #D67866;font-size: 17px;">You're just 3 simple steps away from exploring <?php echo COMPANY_NAME?>!</h6>
 	</div>
 	<table cellpadding="0" cellspacing="0" border="0" style="width:97%;padding-top: 20px;">
 		<tr>

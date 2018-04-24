@@ -45,11 +45,11 @@
 		<div class="fl apply_button">
 		<div id="apply_btn" class="fl">
 		<?php if(PAGE_NAME == 'glide_chart') { ?>
-		<button class="btn btn_blue aply_btn" type="button" onclick= "return validatechart('bug');" value="Update" name="submit_Profile" id="submit_Profile">Apply</button>
+		<button class="btn submit-btn aply_btn" type="button" onclick= "return validatechart('bug');" value="Update" name="submit_Profile" id="submit_Profile">Apply</button>
 		<?php } elseif(PAGE_NAME == 'chart') { ?>
-		<button class="btn btn_blue aply_btn" type="button" onclick= "return validatechart('task');" value="Update" name="submit_Profile" id="submit_Profile">Apply</button>
+		<button class="btn submit-btn aply_btn" type="button" onclick= "return validatechart('task');" value="Update" name="submit_Profile" id="submit_Profile">Apply</button>
 		<?php } elseif(PAGE_NAME == 'hours_report'){ ?>
-		<button class="btn btn_blue aply_btn" type="button" onclick= "return validatechart('hours');" value="Update" name="submit_Profile" id="submit_Profile">Apply</button>
+		<button class="btn submit-btn aply_btn" type="button" onclick= "return validatechart('hours');" value="Update" name="submit_Profile" id="submit_Profile">Apply</button>
 		<?php } ?>
 		</div>
 		

@@ -60,7 +60,7 @@
 	    </span>
 	    <span id="btn_addmem">
 		<input type="hidden" id="uniq_id" value="<?php echo $uniq_id; ?>">
-		<button type="submit" value="Add" name="addMember" class="btn btn_blue"><i class="icon-big-tick"></i>Add</button>
+		<button type="submit" value="Add" name="addMember" class="btn submit-btn"><i class="icon-big-tick"></i>Add</button>
 		<button class="btn btn_grey reset_btn" type="button" name="cancel" onclick="closePopup();" ><i class="icon-big-cross"></i>Cancel</button>
 	    </span>
 		<?php

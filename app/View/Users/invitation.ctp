@@ -116,7 +116,7 @@ else {
                             <input type="hidden" name="data[User][qstr]" id="hidId" value="<?php echo $qstr; ?>" readonly="true"/>
                             <span id="signupbtn">
                                 <!--<button type="submit" name="submit_SignUp" id="submit_SignUp" value="Sign Up" style="width:95px; cursor:pointer;padding:1px 10px; height:26px">Sign Up</button>-->
-                                <button type="submit" name="submit_SignUp" id="submit_SignUp" value="Sign Up" class="btn btn_blue">Sign Up</button>
+                                <button type="submit" name="submit_SignUp" id="submit_SignUp" value="Sign Up" class="btn submit-btn">Sign Up</button>
                             </span>
                             <span id="signupload" style="display:none;"><img src="<?php echo HTTP_IMAGES; ?>images/del.gif" alt="Loading..." title="Loading..." width="16" height="16"/></span>
                        

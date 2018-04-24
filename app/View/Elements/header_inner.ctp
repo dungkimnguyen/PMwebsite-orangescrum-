@@ -25,7 +25,7 @@ if( $is_active_proj || (SES_TYPE==3)){
 <?php }?>
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 	<!-- Brand and toggle get grouped for better mobile display -->
-	<div class="navbar-header">
+<!--	<div class="navbar-header">
 	  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
 		<span class="sr-only">Toggle navigation</span>
 		<span class="icon-bar"></span>
@@ -33,12 +33,12 @@ if( $is_active_proj || (SES_TYPE==3)){
 		<span class="icon-bar"></span>
 	  </button>
 	  <a class="navbar-brand" href="<?php echo HTTP_ROOT.Configure::read('default_action');?>"></a>
-	</div>
+	</div>-->
 	<!-- Collect the nav links, forms, and other content for toggling -->
 	<div class="collapse navbar-collapse navbar-ex1-collapse">
 	<?php if(PAGE_NAME != "help" && PAGE_NAME != "tour" && PAGE_NAME != "customer_support") { ?>
 		  <ul class="nav navbar-nav side-nav">
-			<?php if(ACCOUNT_STATUS!=2){ //$is_active_proj && ACCOUNT_STATUS!=2?>
+			<?php /* if(ACCOUNT_STATUS!=2){ //$is_active_proj && ACCOUNT_STATUS!=2?>
 			<?php if($is_active_proj){?>
 			<li class="new_task_li">
 				<button class="btn new_task" type="button" onclick="creatask();"><i class="icon-new-task"></i>Create Task</button>
@@ -47,7 +47,7 @@ if( $is_active_proj || (SES_TYPE==3)){
                         <li class="new_task_li">
 				<button class="btn new_task" type="button" onclick="alert('Please create a Project to add Task under that Project');" ><i class="icon-new-task"></i>Create Task</button>
 			</li>
-			<?php } }?>
+			<?php } }*/ //new developer change?>
 			
 			<li class="allmenutab <?php if(CONTROLLER == "easycases" && (PAGE_NAME == "mydashboard")) { echo 'active'; } ?>"><a href="<?php echo HTTP_ROOT.'mydashboard';?>"><i class="menu_sprite_ico menu_sprite_ico_dashboard"></i> Dashboard</a></li>
 			
@@ -105,16 +105,16 @@ if( $is_active_proj || (SES_TYPE==3)){
 			</li>
 		  </ul>
 		<?php } ?>
-	  <ul class="nav navbar-nav navbar-left navbar-user" <?php if(PAGE_NAME == "help") { ?>style="margin-left:0px;"<?php } ?>>
-<!--		<li class="dropdown alerts-dropdown help_a">
+	 <ul class="nav navbar-nav navbar-left navbar-user" <?php if(PAGE_NAME == "help") { ?>style="margin-left:0px;"<?php } ?>>
+		<!-- <li class="dropdown alerts-dropdown help_a">
 		  <a href="https://www.COMPANY_NAME.com/help" target="_blank"><i class="menu_sprite_ico menu_sprite_help" title="Help &amp; Support"></i><span class="ipad_txt" >Help &amp; Support</span></a>
-		</li>-->
+		</li>new developer change-->
         <li class="dropdown user-dropdown user_gt">
         	<a href="<?php echo HTTP_ROOT.'getting_started';?>" title="Getting Started">
         	<div class="fl get_icon"></div>
             <span class="ipad_txt">Getting Started</span></a>
         </li>         
-	  </ul>
+	  </ul> 
 	  
 	 <ul class="nav navbar-nav navbar-right navbar-user ie_navbar_top">
 		 <?php if($is_active_proj && ACCOUNT_STATUS!=2){?>
@@ -290,14 +290,14 @@ if( $is_active_proj || (SES_TYPE==3)){
 
 <input type="hidden" name="pub_counter" id="pub_counter" value="0" />
 <input type="hidden" name="hid_casenum" id="hid_casenum" value="0" />
-<div style="display:block; position:fixed; width:88%; text-align:center;z-index: 2147483647; position:fixed">
+<!--<div style="display:block; position:fixed; width:88%; text-align:center;z-index: 2147483647; position:fixed">
      <div onClick="removePubnubMsg();" id="punnubdiv" align="center" style="display:none;">
           <div class="fls-spn">
               <div id="pubnub_notf" class="topalerts alert_info msg_span" ></div>
 			  <div class="fr close_popup" style="margin:-48px 8px 0 0;">X</div>
           </div>
      </div>
-</div>
+</div>-->
 <!-- Flash Success and error msg starts --> 
 <div id="topmostdiv">
     <?php if ($success) { ?>

@@ -7,7 +7,7 @@
     <div style="width:600px;margin:25px auto 5px;border:1px solid #BCE8F1;text-align:left;background:#D9EDF7;color:#31708F;font-size:13px;padding:5px 5px" class="fl">
         12 default Task Types listed and the #of Tasks associated with them. You can remove any of them by unchecking the checkbox and save the changes.<br/>Click on the "<b>+ New Task Type</b>" and add your new Task Types.
     </div>
-    <div class="fr"><button class="btn btn_blue" onclick="addNewTaskType();" style="padding: 5px;margin-right: 3px !important;margin-top:60px">+ New Task Type</button></div>
+    <div class="fr"><button class="btn submit-btn" onclick="addNewTaskType();" style="padding: 5px;margin-right: 3px !important;margin-top:60px">+ New Task Type</button></div>
     <div class="cb"></div>
 </div>
 <div class="fl import-csv-file" style="border:1px solid #ccc;width: 95%;">
@@ -112,7 +112,7 @@
     }?>
     <div class="import_btn_div fl" style="width: 100%;height: 60px;">
 	<img src="<?php echo HTTP_IMAGES; ?>images/case_loader2.gif" alt="Loading..." title="Loading..."  id="loader_img_tt" style="display: none;position: absolute;"/>
-	<button type="button" id="tt_save_btn" name="tt_save_btn" class="btn btn_blue" onclick="return saveTaskType();">
+	<button type="button" id="tt_save_btn" name="tt_save_btn" class="btn submit-btn" onclick="return saveTaskType();">
 	    <i class="icon-big-tick"></i>
 	    <span style="color: #fff;">Save</span>
 	</button>
@@ -126,7 +126,7 @@ else {
 <div class="impexp_div" style="border:none">
 	<span style="font-size:13px;">Task Types are independent of Projects, but please create a Project to get started.</span>
     <br/><br/>
-   	<button onclick="newProject();" type="button" class="btn btn_blue">Create Project</button>
+   	<button onclick="newProject();" type="button" class="btn submit-btn">Create Project</button>
     
 </div>
 

@@ -3,8 +3,8 @@
 <footer <?php if(CONTROLLER == 'easycases' && PAGE_NAME == 'help'){ ?> class="help_footer" <?php } ?> id="footersection">
 	<div class="col-lg-5 ft_lt_div" id="csTotalHours">
 	</div>
-	<div class="col-lg-2 text-centre ft_md_div">
-	COMPANY_NAME <?php echo VERSION; ?>
+    <div class="col-lg-2 text-centre ft_md_div" style=" font-size: 30px; color: #884bdf;">
+	Tabula <?php //echo VERSION; ?>
 	</div>
 	<div class="col-lg-5 text-right rht_ft_txt ft_rt_div" id="projectaccess">
 	
@@ -37,7 +37,7 @@ var PROJECTS = <?php echo json_encode($GLOBALS['getallproj']); ?>;
 var defaultAssign = '<?php echo $defaultAssign; ?>';
 var dassign;
 var TASKTMPL = <?php echo json_encode($GLOBALS['getTmpl']); ?>;
-var SITENAME = 'COMPANY_NAME';
+var SITENAME = 'Tabula';
 var TITLE_DLYUPD = '<?php echo "Daily Update - ".date("m/d"); ?>';
 </script>
 

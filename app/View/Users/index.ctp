@@ -24,7 +24,7 @@ echo $this->Html->css('css/responsive');?>
                             <!-- Logo -->
                              <div class="logo_landing" style="color:white; font-size:40px;">
 
-                                 <img src="<?php echo HTTP_ROOT; ?>img/images/logo_def1.png"  border="0" alt="COMPANY_NAME.com" title="COMPANY_NAME.com"  style=" max-width:210px; "/>
+                                 <img src="<?php echo HTTP_ROOT; ?>img/images/logo_def1.png"  border="0" alt="<?php echo 'Tabula'?>" title="<?php echo 'Tabula'?>"  style=" max-width:210px; "/>
 <!--<h4>Welcome to COMPANY_NAME Community Edition v0.1</h4>-->
                 </div>
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ca-navbar" aria-controls="ca-navbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -82,7 +82,7 @@ echo $this->Html->css('css/responsive');?>
         </div>
         <!-- Welcome thumb -->
         <div class="welcome-thumb wow fadeInDown" data-wow-delay="0.5s">
-            <img src="<?php echo HTTP_ROOT; ?>img/img/bg-img/welcome-img1.png" alt="">
+            <img src="<?php echo HTTP_ROOT; ?>img/img/bg-img/welcome-img.png" alt="">
         </div>
     </section>
     <!-- ***** Welcome Area End ***** -->

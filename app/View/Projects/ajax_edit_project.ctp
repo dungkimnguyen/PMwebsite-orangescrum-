@@ -66,7 +66,7 @@
 		    <input type="hidden" value="<?php echo $uniqid; ?>" name="data[Project][uniq]" id="uniqid"/>
 		    <input type="hidden" value="<?php echo $projArr['Project']['id'] ?>" name="data[Project][id]"/>
 		
-		    <button type="button" value="Save" class="btn btn_blue" onclick= "return submitProject('txt_proj','txt_shortProjEdit')" id="savebtn"><i class="icon-big-tick"></i>Save</button>
+		    <button type="button" value="Save" class="btn submit-btn" onclick= "return submitProject('txt_proj','txt_shortProjEdit')" id="savebtn"><i class="icon-big-tick"></i>Save</button>
 		    <!--<button class="btn btn_grey" type="button" onclick="closePopup();"><i class="icon-big-cross"></i>Cancel</button>-->
             <span class="or_cancel">or<a onclick="closePopup();">Cancel</a></span>
     		</span>

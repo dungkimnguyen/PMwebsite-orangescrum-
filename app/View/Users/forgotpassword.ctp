@@ -12,7 +12,7 @@
         	<div style="position:relative">
             	<div class="bg_logo_inner"></div>
                 <div class="logo_landing" style="color:white; font-size:40px;"> 
-                   <a href="<?php echo HTTPS_HOME; ?>"><img src="<?php echo HTTP_ROOT; ?>img/images/logo_def1.png"  border="0" alt="COMPANY_NAME.com" title="COMPANY_NAME.com" width="80%"/></a>
+                   <a href="<?php echo HTTPS_HOME; ?>"><img src="<?php echo HTTP_ROOT; ?>img/images/logo_def1.png"  border="0" alt="<?php echo COMPANY_NAME?>" title="<?php echo COMPANY_NAME?>" width="80%"/></a>
                 </div>
                 <div class="login_box">
                     <div class="login_dialog" id="login_dialog">
@@ -32,7 +32,7 @@
                                             <tr>
                                               <td>
                                                   <p style="color: #726a84;font-size: 16px;font-weight: 300;margin-top: 0;" >
-                                                      To reset your password, type the full email address you use to sign in to your COMPANY_NAME Account.</p>
+                                                      To reset your password, type the full email address you use to sign in to your <?php echo COMPANY_NAME?> Account.</p>
                                               </td>
                                             </tr>
                                                 <td align="center">
@@ -104,7 +104,7 @@
                                         
                                         <input type="hidden" id="user_id" name="user_id" value="<?php if(isset($user_id)) { echo $user_id; } ?>" readonly="true">
                                         <span id="savpass" style="margin-left:20px; margin-top:10px;">
-                                        <button type="submit" value="Submit" name="submit_pwd" class="btn btn_blue" style="cursor:pointer">Submit</button>
+                                        <button type="submit" value="Submit" name="submit_pwd" class="btn submit-btn" style="cursor:pointer">Submit</button>
                                         <span class="or_cancel">or<a href="<?php echo HTTP_ROOT; ?>users/login">Cancel</a></span>
                                         </span>
                                         <span id="savload" style="display:none;padding-left:20px;">

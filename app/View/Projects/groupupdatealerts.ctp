@@ -34,8 +34,8 @@
 				<div style="display: none;padding: 0 0 25px;" id="cancel_daily_update"><a style="color: red;text-decoration: underline;" onclick="cancel_daily_update();" href="javascript:jsVoid();">Cancel Daily Catch-Up</a></div>
 				<div>
 				<span id="subprof1">
-					<button type="submit" name="submit_Pass"  id="daily_btn_disable" class="btn btn_blue btn_disabled" disabled="true"><i class="icon-big-tick"></i>Save</button>
-					<button type="submit" name="submit_Pass"  id="daily_btn" class="btn btn_blue" onclick="return validateDailyMail();" style="display:none"><i class="icon-big-tick"></i>Save</button>
+					<button type="submit" name="submit_Pass"  id="daily_btn_disable" class="btn submit-btn btn_disabled" disabled="true"><i class="icon-big-tick"></i>Save</button>
+					<button type="submit" name="submit_Pass"  id="daily_btn" class="btn submit-btn" onclick="return validateDailyMail();" style="display:none"><i class="icon-big-tick"></i>Save</button>
 					<!--<button type="button" class="btn btn_grey" onclick="cancelProfile('<?php echo $referer;?>');"><i class="icon-big-cross"></i>Cancel</button>-->
 					 <span class="or_cancel">or
 						<a onclick="cancelProfile('<?php echo $referer;?>');">Cancel</a>

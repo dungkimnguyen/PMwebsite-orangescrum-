@@ -391,11 +391,6 @@ class User extends AppModel{
 		return $arr;
 	}
     
-    /**
-     * @Method: Public keepPassChk($uid) Check users logged in different browsers and logged out if some one changes the password
-     * @author PRB <support@COMPANY_NAME.com>
-     * @return array 
-     */
     function keepPassChk($uid) {
         App::import('Model', 'OsSessionLog');
         $OsSessionLog = new OsSessionLog();

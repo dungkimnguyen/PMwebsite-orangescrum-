@@ -151,8 +151,8 @@ $menuArray = array(
 					<div class="cb"></div>
 					<ul class="classli">
 						<li>Create your custom Task Templates, use that while creating Tasks</li>
-						<li>COMPANY_NAME provides some default Task Templates.</li>
-						<li>No formatting required every time you create Daily Updates, Meeting Minutes, Status updates or Bugs on COMPANY_NAME</li>
+						<li><?php echo COMPANY_NAME?> provides some default Task Templates.</li>
+						<li>No formatting required every time you create Daily Updates, Meeting Minutes, Status updates or Bugs on <?php echo COMPANY_NAME?></li>
 					</ul>
 					<div class="cb" align="center">
 						<a href="<?php echo HTTP_ROOT;?>img/features/task-template.gif?v=<?php echo RELEASE; ?>" target="_blank"><img src="<?php echo HTTP_ROOT;?>img/features/task-template.gif?v=<?php echo RELEASE; ?>" style="max-width:100%" alt="Task Template" class="features"/></a>
@@ -185,7 +185,7 @@ $menuArray = array(
 					<div class="cb"></div>
 					<ul class="classli">
 						<li>Attaching a file from Dropbox or Google Drive, it is simply linked to the cloud storage</li>
-						<li>Trim down COMPANY_NAME storage usage</li>
+						<li>Trim down <?php echo COMPANY_NAME?> storage usage</li>
 						<li>No more managing files from multiple locations</li>
 					</ul>
 					<div class="cb" align="center">

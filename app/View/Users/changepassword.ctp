@@ -36,8 +36,8 @@
             <td class="btn_align">
             	<span id="subprof1">
 		<input type="hidden" name="data[User][changepass]" id="changepass" readonly="true" value="0"/>
-		<?php /*<button type="submit" value="<?php if(NO_PASSWORD){echo 'Set';}else{ echo 'Change';}?>" name="submit_Pass"  id="submit_Pass" class="btn btn_blue" onclick="document.getElementById('changepass').value='1'"><i class="icon-big-tick"></i>Change</button> */ ?>
-		<button type="button" value="<?php if(NO_PASSWORD){echo 'Set';}else{ echo 'Change';}?>" name="submit_Pass"  id="submit_Pass" class="btn btn_blue" onclick="$('#changepass').val('1');checkCsrfToken('UserChangepasswordForm');"><i class="icon-big-tick"></i>Change</button>
+		<?php /*<button type="submit" value="<?php if(NO_PASSWORD){echo 'Set';}else{ echo 'Change';}?>" name="submit_Pass"  id="submit_Pass" class="btn submit-btn" onclick="document.getElementById('changepass').value='1'"><i class="icon-big-tick"></i>Change</button> */ ?>
+		<button type="button" value="<?php if(NO_PASSWORD){echo 'Set';}else{ echo 'Change';}?>" name="submit_Pass"  id="submit_Pass" class="btn submit-btn" onclick="$('#changepass').val('1');checkCsrfToken('UserChangepasswordForm');"><i class="icon-big-tick"></i>Change</button>
 		<!--<button type="button" class="btn btn_grey" onclick="cancelProfile('<?php echo $referer;?>');"><i class="icon-big-cross"></i>Cancel</button>-->
                  <span class="or_cancel">or
                     <a onclick="cancelProfile('<?php echo $referer;?>');">Cancel</a>

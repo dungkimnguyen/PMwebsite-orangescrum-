@@ -203,6 +203,6 @@
 <div style="clear:both;"></div>
 <?php if(count($contacts['feed']['entry'])){ ?>
 <div style="margin: 0px auto; text-align: center;">
-    <button class="btn btn_blue" onclick="SetName();" style="padding:7px 15px;">Import</button> or <a class="eml_hover_lnk" href="javascript:void(0);" onclick="cancel();">Cancel</a>
+    <button class="btn submit-btn" onclick="SetName();" style="padding:7px 15px;">Import</button> or <a class="eml_hover_lnk" href="javascript:void(0);" onclick="cancel();">Cancel</a>
 </div>
 <?php } ?>

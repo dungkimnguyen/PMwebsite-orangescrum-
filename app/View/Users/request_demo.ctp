@@ -307,7 +307,7 @@ function loader() {
                         <?php echo $this->Form->create('DemoRequest',array('url'=>'/users/request_demo')); ?>
 						<?php echo $this->Form->hidden('timezone_id'); ?>
                         <h3 class="reg" style="font-size:33px;color:#333">Schedule a Demo</h3>
-                        <div style="font-size:22px;color:#333;font-family:'MyriadPro-Regular'; text-align:left">Contact Us Now to See What COMPANY_NAME Can Do For You!</div>
+                        <div style="font-size:22px;color:#333;font-family:'MyriadPro-Regular'; text-align:left">Contact Us Now to See What <?php echo COMPANY_NAME?> Can Do For You!</div>
                         
                         <div class="gap10"></div>
                         <div class="gap10"></div>
@@ -337,7 +337,7 @@ function loader() {
                     <div class="gap10"></div>
 
                     <div id="su_bmit" align="center">
-                        <button type="submit" value="Save"  name="submit_button" id="submit_button" class="btn btn_blue"  style="font-size:18px;font-weight:bold;" onclick="return loader()">Submit</button>
+                        <button type="submit" value="Save"  name="submit_button" id="submit_button" class="btn submit-btn"  style="font-size:18px;font-weight:bold;" onclick="return loader()">Submit</button>
                         
                         <?php echo $this->Form->end(); ?>
                     </div>

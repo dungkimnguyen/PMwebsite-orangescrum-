@@ -19,7 +19,7 @@ define("SMTP_PORT", "465");
 define("SMTP_UNAME", "nubecons@gmail.com");
 define("SMTP_PWORD", "123456");
 // userdefinde constants 
-define("COMPANY_NAME", "NubeCons");
+define("COMPANY_NAME", "Tabula");
 define("COMPANY_TEXT", "Company Text");
 
 //https://www.arclab.com/en/amlc/list-of-smtp-and-imap-servers-mailserver-list.html (Get the list of Host names)

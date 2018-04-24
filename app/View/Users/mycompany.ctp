@@ -37,8 +37,8 @@
             <td class="btn_align">
             	<span id="subprof1">
 		<input type="hidden" name="data[User][changepass]" id="changepass" readonly="true" value="0"/>
-		<?php /* <button type="submit" value="Update" name="submit_Pass"  id="submit_Pass" class="btn btn_blue"><i class="icon-big-tick"></i>Update</button> */ ?>
-		<button type="button" value="Update" name="submit_Pass"  id="submit_Pass" class="btn btn_blue" onclick="checkCsrfToken('CompanyMycompanyForm');"><i class="icon-big-tick"></i>Update</button>
+		<?php /* <button type="submit" value="Update" name="submit_Pass"  id="submit_Pass" class="btn submit-btn"><i class="icon-big-tick"></i>Update</button> */ ?>
+		<button type="button" value="Update" name="submit_Pass"  id="submit_Pass" class="btn submit-btn" onclick="checkCsrfToken('CompanyMycompanyForm');"><i class="icon-big-tick"></i>Update</button>
 		<!--<button type="button" class="btn btn_grey" onclick="cancelProfile('<?php echo $referer;?>');"><i class="icon-big-cross"></i>Cancel</button>-->
          <span class="or_cancel">or
             <a onclick="cancelProfile('<?php echo $referer;?>');">Cancel</a>

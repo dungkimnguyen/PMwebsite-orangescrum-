@@ -75,7 +75,7 @@ echo $this->Form->create('User', array('url' => '/users/new_user', 'id' => 'myfo
 	    </span>
 	    <span id="btn_addmem">
 		<input type="hidden" id="uniq_id" value="<?php echo COMP_UID; ?>">
-		<button type="submit" value="Add" name="addMember" class="btn btn_blue"><i class="icon-big-tick"></i>Add</button>
+		<button type="submit" value="Add" name="addMember" class="btn submit-btn"><i class="icon-big-tick"></i>Add</button>
 		<!--<button class="btn btn_grey reset_btn" type="button" name="cancel" onclick="closePopup();" ><i class="icon-big-cross"></i>Cancel</button>-->
          <span class="or_cancel">or
             <a onclick="closePopup();">Cancel</a>

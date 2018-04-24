@@ -25,7 +25,7 @@
 								<br/>
 								
 								<p>Regards,<br/>
-								The COMPANY_NAME Team</p>
+								The <?php echo COMPANY_NAME?>s Team</p>
                             </td>
                         </tr>
                    </table>
@@ -39,12 +39,12 @@
 									if($existing_user)
 									{
 									?>
-										You are receiving this email notification because you have subscribed to COMPANY_NAME, to unsubscribe, please email with subject 'Unsubscribe' to <a href='mailto:support@COMPANY_NAME.com'>support@COMPANY_NAME.com</a>
+										You are receiving this email notification because you have subscribed to <?php echo COMPANY_NAME?>, to unsubscribe, please email with subject 'Unsubscribe' to <a href='mailto:support@COMPANY_NAME.com'>support@COMPANY_NAME.com</a>
 									<?php
 									}
 									else {
 									?>
-										Your email address is used to invite you on COMPANY_NAME. If you didn't intend to do this, just ignore this email; no account has been created yet.
+										Your email address is used to invite you on <?php echo COMPANY_NAME?>. If you didn't intend to do this, just ignore this email; no account has been created yet.
 									<?php
 									}
 									?>

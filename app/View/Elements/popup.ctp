@@ -51,7 +51,7 @@
 			    <img src="<?php echo HTTP_IMAGES; ?>images/case_loader2.gif" alt="Loader"/>
 			</span>
 			<span id="ttbtn">
-			    <button id="newtask_btn" type="button" value="Add" onclick="return validateTaskType();" name="crttasktype" class="btn btn_blue"><i class="icon-big-tick"></i>Add</button>
+			    <button id="newtask_btn" type="button" value="Add" onclick="return validateTaskType();" name="crttasktype" class="btn submit-btn"><i class="icon-big-tick"></i>Add</button>
 			    <span class="or_cancel">or
 			       <a onclick="closePopup();">Cancel</a>
 			   </span>
@@ -73,7 +73,7 @@
 	    <div class="loader_dv"><center><img src="<?php echo HTTP_IMAGES; ?>images/case_loader2.gif" alt="Loading..." title="Loading..." /></center></div>
 	    <div class="help-text"> 
 			If you get stuck or need help with anything we are here for you. Just <a data-toggle="dropdown" class="dropdown-toggle support-popup" href="javascript:void(0);" onclick="trackclick('Send us a line')">send us a line</a> we will get back to you as soon as possible or find your answer at our <a href="<?php echo HTTP_ROOT.'help';?>" target="_blank" onclick="trackclick('Help Desk');">help desk</a>.</div>
-		<div class="hlpe_popbtn"><button class="btn btn_blue" onclick="closePopup();trackclick('Ok ,got it!');"><i class="icon-big-tick"></i>Ok, got it!</button></div>			
+		<div class="hlpe_popbtn"><button class="btn submit-btn" onclick="closePopup();trackclick('Ok ,got it!');"><i class="icon-big-tick"></i>Ok, got it!</button></div>			
 	</div>
     </div>
     <!-- Help popup ends -->
@@ -190,12 +190,12 @@
 				<input type="hidden" id="w" name="w" />
 				<input type="hidden" id="h" name="h" />
 				<div id="actConfirmbtn" style="display:none;">
-				    <button type="button" value="Confirm" class="btn btn_blue file_confirm_btn" onclick="doneCropImage()"><i class="icon-big-tick"></i>Confirm</button>
+				    <button type="button" value="Confirm" class="btn submit-btn file_confirm_btn" onclick="doneCropImage()"><i class="icon-big-tick"></i>Confirm</button>
 				    <div id="file_confirm_btn_loader" style="float: left;width: 60px;display:none;"><img src="<?php echo HTTP_IMAGES; ?>images/case_loader2.gif" alt="Loading..." title="Loading..." /></div>
 				    <button class="btn btn_grey reset_btn file_confirm_btn" type="button" Onclick="profilePopupCancel();" ><i class="icon-big-cross"></i>Cancel</button>
 				</div>
 				<div id="inactConfirmbtn" style="display:block;">
-				    <button type="button" value="Confirm" class="btn btn_blue btn_impcsv" disabled="disabled" onclick="javascript:void(0);"><i class="icon-big-tick"></i>Confirm</button>
+				    <button type="button" value="Confirm" class="btn submit-btn btn_impcsv" disabled="disabled" onclick="javascript:void(0);"><i class="icon-big-tick"></i>Confirm</button>
 				    <button class="btn btn_grey reset_btn" type="button" Onclick="profilePopupCancel();" ><i class="icon-big-cross"></i>Cancel</button>
 				</div>
 			    </td>
@@ -257,7 +257,7 @@
 		    <img src="<?php echo HTTP_IMAGES; ?>images/case_loader2.gif" alt="loading..." title="loading..."/> 
 		</span>
 		<span id="rmv_btn">
-		    <button class="btn btn_blue" id="rmvbtn"  value="Remove" type="button" onclick="removeusers()"><i class="icon-big-tick"></i>Remove</button>
+		    <button class="btn submit-btn" id="rmvbtn"  value="Remove" type="button" onclick="removeusers()"><i class="icon-big-tick"></i>Remove</button>
 		    <!--<button class="btn btn_grey" type="button" onclick="closePopup();"><i class="icon-big-cross"></i>Cancel</button>-->
             <span class="or_cancel">or<a onclick="closePopup();">Cancel</a></span>
 		</span>
@@ -310,8 +310,8 @@
 		</span>
 		<span id="popupload" class="ldr-ad-btn">Loading users... <img src="<?php echo HTTP_IMAGES;?>images/case_loader2.gif" title="Loading..." alt="Loading..."/></span>
 		<span id="confirmbtn" style="display:block;">
-		    <button class="btn btn_blue" id="confirmusercls" value="Confirm" type="button" onclick="assignuser(this)"><i class="icon-big-tick"></i>Add</button>
-		    <button class="btn btn_blue" id="confirmuserbut" value="Confirm" type="button" onclick="assignuser(this)"><i class="icon-big-tick"></i>Add & Continue</button>
+		    <button class="btn submit-btn" id="confirmusercls" value="Confirm" type="button" onclick="assignuser(this)"><i class="icon-big-tick"></i>Add</button>
+		    <button class="btn submit-btn" id="confirmuserbut" value="Confirm" type="button" onclick="assignuser(this)"><i class="icon-big-tick"></i>Add & Continue</button>
 		    <!--<button class="btn btn_grey" type="button" onclick="closePopup();"><i class="icon-big-cross"></i>Cancel</button>-->
                     <span class="or_cancel">or
                         <a onclick="closePopup();">Cancel</a>
@@ -319,7 +319,7 @@
 		</span>
 		
 		<span id="excptAddContinue" style="display:none;">
-		    <button class="btn btn_blue" id="confirmusercls"  value="Confirm" type="button" onclick="assignuser(this)"><i class="icon-big-tick"></i>Add</button>
+		    <button class="btn submit-btn" id="confirmusercls"  value="Confirm" type="button" onclick="assignuser(this)"><i class="icon-big-tick"></i>Add</button>
 		    <!--<button class="btn btn_grey" type="button" onclick="closePopup();"><i class="icon-big-cross"></i>Cancel</button>-->
                     <span class="or_cancel">or
                         <a onclick="closePopup();">Cancel</a>
@@ -370,8 +370,8 @@
 		</span>
 		<span id="prjpopupload" class="ldr-ad-btn">Loading projects... <img src="<?php echo HTTP_IMAGES;?>images/case_loader2.gif" title="Loading..." alt="Loading..."/></span>
 		<span id="confirmbtnprj" style="display:block;">
-		    <button class="btn btn_blue" id="confirmprjcls" value="Confirm" type="button" onclick="assignproject(this)"><i class="icon-big-tick"></i>Assign</button>
-		    <button class="btn btn_blue" id="confirmprjbut" value="Confirm" type="button" onclick="assignproject(this)"><i class="icon-big-tick"></i>Assign & Continue</button>
+		    <button class="btn submit-btn" id="confirmprjcls" value="Confirm" type="button" onclick="assignproject(this)"><i class="icon-big-tick"></i>Assign</button>
+		    <button class="btn submit-btn" id="confirmprjbut" value="Confirm" type="button" onclick="assignproject(this)"><i class="icon-big-tick"></i>Assign & Continue</button>
 		    <!--<button class="btn btn_grey" type="button" onclick="closePopup();"><i class="icon-big-cross"></i>Cancel</button>-->
             <span class="or_cancel">or<a onclick="closePopup();">Cancel</a></span>
 		</span>
@@ -405,7 +405,7 @@
 		    <img src="<?php echo HTTP_IMAGES; ?>images/case_loader2.gif" alt="loading..." title="loading..."/> 
 		</span>
 		<span id="rmv_prj_btn">
-		    <button class="btn btn_blue" id="rmvprjbtn"  value="Remove" type="button" onclick="removeprojects()"><i class="icon-big-tick"></i>Remove</button>
+		    <button class="btn submit-btn" id="rmvprjbtn"  value="Remove" type="button" onclick="removeprojects()"><i class="icon-big-tick"></i>Remove</button>
 		    <!--<button class="btn btn_grey" type="button" onclick="closePopup();"><i class="icon-big-cross"></i>Cancel</button>-->
             <span class="or_cancel">or<a onclick="closePopup();">Cancel</a></span>
 		</span>
@@ -473,8 +473,8 @@
 		    <img src="<?php echo HTTP_IMAGES; ?>images/case_loader2.gif" alt="loading..." title="loading..."/> 
 		</span>
 		<span id="confirmbtntsk" style="display:block;">
-		    <button class="btn btn_blue showhidebtn" id="addtsk" value="Add" type="button" onclick="assignCaseToMilestone(this)"><i class="icon-big-tick"></i>Add</button>
-		    <button class="btn btn_blue showhidebtn" id="addtskncont" value="Add" type="button" onclick="assignCaseToMilestone(this)"><i class="icon-big-tick"></i>Add & Continue</button>
+		    <button class="btn submit-btn showhidebtn" id="addtsk" value="Add" type="button" onclick="assignCaseToMilestone(this)"><i class="icon-big-tick"></i>Add</button>
+		    <button class="btn submit-btn showhidebtn" id="addtskncont" value="Add" type="button" onclick="assignCaseToMilestone(this)"><i class="icon-big-tick"></i>Add & Continue</button>
 		    <!--<button class="btn btn_grey" type="button" onclick="closePopup();"><i class="icon-big-cross"></i>Cancel</button>-->
             <span class="or_cancel">
                 or
@@ -507,7 +507,7 @@
 				<img src="<?php echo HTTP_IMAGES; ?>images/case_loader2.gif" alt="loading..." title="loading..."/> 
 			</span>
 			<span id="mvtask_confirmbtn" style="display:block;">
-				<button class="btn btn_blue" id="mvtask_movebtn" value="Add" type="button" onclick="switchTaskToMilestone(this)"><i class="icon-big-tick"></i>Move Task</button>
+				<button class="btn submit-btn" id="mvtask_movebtn" value="Add" type="button" onclick="switchTaskToMilestone(this)"><i class="icon-big-tick"></i>Move Task</button>
 				<!--<button class="btn btn_grey" type="button" onclick="closePopup();"><i class="icon-big-cross"></i>Cancel</button>-->
                 <span class="or_cancel">or<a onclick="closePopup();">Cancel</a></span>
 			</span>
@@ -564,8 +564,8 @@
 					<img src="<?php echo HTTP_IMAGES; ?>images/case_loader2.gif" alt="loading..." title="loading..."/> 
 				</span>
 				<span id="confirmbtntsk" style="display:block;">
-					<button class="btn btn_blue" id="addtsk" value="Add" type="button" onclick=" return removecaseFromMilestone(this)"><i class="icon-big-tick"></i>Remove</button>
-					<!--<button class="btn btn_blue" id="addtskncont" value="Add" type="button" onclick="assignCaseToMilestone(this)"><i class="icon-big-tick"></i>Add & Continue</button>-->
+					<button class="btn submit-btn" id="addtsk" value="Add" type="button" onclick=" return removecaseFromMilestone(this)"><i class="icon-big-tick"></i>Remove</button>
+					<!--<button class="btn submit-btn" id="addtskncont" value="Add" type="button" onclick="assignCaseToMilestone(this)"><i class="icon-big-tick"></i>Add & Continue</button>-->
 					<!--<button class="btn btn_grey" type="button" onclick="closePopup();"><i class="icon-big-cross"></i>Cancel</button>-->
                     <span class="or_cancel">or<a onclick="closePopup();">Cancel</a></span>
 				</span>
@@ -621,7 +621,7 @@
 				<img src="<?php echo HTTP_IMAGES; ?>images/case_loader2.gif" alt="loading..." title="loading..."/> 
 			    </span>
 			    <span id="spt_btn">
-				<button class="btn btn_blue" type="button" value="Post" name="addMember" onclick="postSupport();action_ga('Feedback Post');"><i class="icon-big-tick"></i>Post</button>
+				<button class="btn submit-btn" type="button" value="Post" name="addMember" onclick="postSupport();action_ga('Feedback Post');"><i class="icon-big-tick"></i>Post</button>
 				<!--<button class="btn btn_grey" type="button" onclick="closePopup();"><i class="icon-big-cross"></i>Cancel</button>-->
                 <span class="or_cancel">
                     or
@@ -677,7 +677,7 @@
 							<img src="<?php echo HTTP_IMAGES; ?>images/case_loader2.gif" alt="loading..." title="loading..."/> 
 						</span>
 						<span id="task_btn">
-							<button class="btn btn_blue" type="button" onclick="createTaskTemplate('add')"><i class="icon-big-tick"></i>Create</button>
+							<button class="btn submit-btn" type="button" onclick="createTaskTemplate('add')"><i class="icon-big-tick"></i>Create</button>
 							<!--<button class="btn btn_grey" type="button" onclick="closePopup();"><i class="icon-big-cross"></i>Cancel</button>-->
                             <span class="or_cancel">or<a onclick="closePopup();">Cancel</a></span>
 						</span>
@@ -723,7 +723,7 @@
 						<img src="<?php echo HTTP_IMAGES; ?>images/case_loader2.gif" alt="loading..." title="loading..."/> 
 					</span>
 					<span id="task_btn_edit">
-						<button class="btn btn_blue" type="button" onclick="createTaskTemplate('edit')"><i class="icon-big-tick"></i>Update</button>
+						<button class="btn submit-btn" type="button" onclick="createTaskTemplate('edit')"><i class="icon-big-tick"></i>Update</button>
 						<!--<button class="btn btn_grey" type="button" onclick="closePopup();"><i class="icon-big-cross"></i>Cancel</button>-->
                         <span class="or_cancel">or<a onclick="closePopup();">Cancel</a></span>
 					</span>
@@ -761,7 +761,7 @@
 							<img src="<?php echo HTTP_IMAGES; ?>images/case_loader2.gif" alt="loading..." title="loading..."/> 
 						</span>
 						<span id="prj_btn">
-							<button class="btn btn_blue" type="button" onclick="createTemplate()"><i class="icon-big-tick"></i>Create</button>
+							<button class="btn submit-btn" type="button" onclick="createTemplate()"><i class="icon-big-tick"></i>Create</button>
 							<button class="btn btn_grey" type="button" onclick="closePopup();"><i class="icon-big-cross"></i>Cancel</button>
 						</span>
 					</td>
@@ -808,7 +808,7 @@
 											<img src="<?php echo HTTP_IMAGES; ?>images/case_loader2.gif" alt="loading..." title="loading..."/> 
 										</span>
 										<span id="prj_btn_task_edit">
-											<button class="btn btn_blue" name="submit_template_edit" value="1" type="submit"><i class="icon-big-tick"></i>Update</button>
+											<button class="btn submit-btn" name="submit_template_edit" value="1" type="submit"><i class="icon-big-tick"></i>Update</button>
 											<button class="btn btn_grey" type="button" onclick="closePopupEdit();"><i class="icon-big-cross"></i>Cancel</button>
 										</span>
 									</td>
@@ -854,7 +854,7 @@
 							<img src="<?php echo HTTP_IMAGES; ?>images/case_loader2.gif" alt="loading..." title="loading..."/> 
 						</span>
 						<span id="prj_btn_edit">
-							<button class="btn btn_blue" type="button" onclick="save_edit_template()"><i class="icon-big-tick"></i>Update</button>
+							<button class="btn submit-btn" type="button" onclick="save_edit_template()"><i class="icon-big-tick"></i>Update</button>
 							<button class="btn btn_grey" type="button" onclick="closePopup();"><i class="icon-big-cross"></i>Cancel</button>
 						</span>
 					</td>
@@ -975,7 +975,7 @@
 		</div>
 		<div class="hlpe_popbtn">
 			<a href="https://twitter.com/intent/tweet?<?php echo $twStr; ?>" target="_blank">
-				<button class="btn btn_blue" type="button" onclick="trackEventGoogle('Tweet and share', 'Tweet and share', 'Clicked For Tweet - Let me tweet');">
+				<button class="btn submit-btn" type="button" onclick="trackEventGoogle('Tweet and share', 'Tweet and share', 'Clicked For Tweet - Let me tweet');">
 					<!--<i class="icon-tweet"></i>-->
 					Let me tweet!
 				</button>
@@ -1225,7 +1225,7 @@
 				<div style="float:left;width:255px;">
 					<input type="hidden" name="hid_http_images" id="hid_http_images" value="<?php echo HTTP_IMAGES; ?>" readonly="true" />
 					<span id="quickcase" style="display:block;" class="nwa">
-					<button class="btn btn_blue" <?php if(count($getallproj) == 0) { ?>disabled="disabled"<?php }?> type="submit" onclick ="return submitAddNewCase('Post',0,'','','',1,'');"><i class="icon-big-tick"></i><span id="ctask_btn">Post</span></button>
+					<button class="btn submit-btn" <?php if(count($getallproj) == 0) { ?>disabled="disabled"<?php }?> type="submit" onclick ="return submitAddNewCase('Post',0,'','','',1,'');"><i class="icon-big-tick"></i><span id="ctask_btn">Post</span></button>
 					<!--<button class="btn btn_grey" type="reset" id="rset" onclick="crt_popup_close();"><i class="icon-big-cross"></i>Cancel</button>-->
                     <span class="or_cancel">or
                     <a id="rset" onclick="crt_popup_close();">Cancel</a>

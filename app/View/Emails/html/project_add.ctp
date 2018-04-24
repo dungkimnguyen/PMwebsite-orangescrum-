@@ -29,7 +29,7 @@
                                 <br/>
 								
 								<p>Regards,<br/>
-								The COMPANY_NAME Team</p>
+								The <?php echo COMPANY_NAME?> Team</p>
                             </td>
                         </tr>
                    </table>
@@ -40,7 +40,7 @@
                             	<p style="color:#222222; font-family:Arial, Helvetica, sans-serif; font-size:11px; line-height:14px; margin-top:0; padding:0; font-weight:normal;padding-top:5px;">
 									<?php echo NEW_EMAIL_FOOTER; ?>
 
-									You are receiving this email notification because you have subscribed to COMPANY_NAME, to unsubscribe, please email with subject 'Unsubscribe' to <a href='mailto:support@COMPANY_NAME.com'>support@COMPANY_NAME.com</a>
+									You are receiving this email notification because you have subscribed to <?php echo COMPANY_NAME?>, to unsubscribe, please email with subject 'Unsubscribe' to <a href='mailto:support@COMPANY_NAME.com'>support@COMPANY_NAME.com</a>
 									
                                 </p>
                             </td>

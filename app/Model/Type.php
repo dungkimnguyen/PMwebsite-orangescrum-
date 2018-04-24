@@ -3,15 +3,7 @@
 class Type extends AppModel {
 
     var $name = 'Type';
-    
-    /**
-    * Listing of task types
-    * 
-    * @method getAllTypes
-    * @author COMPANY_NAME
-    * @return
-    * @copyright (c) Aug/2014, Andolsoft Pvt Ltd.
-    */
+   
     function getAllTypes() {
 	$sql = "SELECT GROUP_CONCAT(DISTINCT id SEPARATOR ',') AS project_ids FROM projects WHERE company_id=". SES_COMP;
 	$data = $this->query($sql);
@@ -26,14 +18,6 @@ class Type extends AppModel {
 	//return $this->find("all", array("conditions" => array(1, '(Type.company_id = 0 OR Type.company_id =' . SES_COMP . ')')));
     }
     
-    /**
-    * Listing of default task types
-    * 
-    * @method getDefaultTypes
-    * @author COMPANY_NAME
-    * @return
-    * @copyright (c) Aug/2014, Andolsoft Pvt Ltd.
-    */
     function getDefaultTypes() {
 	return $this->find("all", array("conditions" => array('Type.company_id' =>  0 )));
     }

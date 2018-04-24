@@ -30,8 +30,7 @@ h1.big_hd_2,h1.big_hd_1{border-bottom:1px solid #E7E7E7;color:#333333;font-size:
     </style>	
 <![endif]-->
 <h1  <?php if(!$this->Session->read('Auth.User.id')){ ?>class="big_hd_2"<?php }else{ ?>class="big_hd_1"<?php } ?>>Frequently Asked Questions</h1>
-			<!--<div class="sml_hd" style="margin:0px auto;width:585px; text-align:center" align="center">You may have questions, we've tried to address them.<br />If you still have questions, please write to us at <a href='mailto:support@COMPANY_NAME.com' style="color:#066D99">support@COMPANY_NAME.com</a></div>
-			<div style="border-top:3px solid #fff; border-bottom:1px solid #dddddd;width:100%;position:relative"></div>-->
+		
 			<div class="container faq_480" style="margin-top:25px;">
 				<div class="fl">
 					<div class="fl faq_con">
@@ -153,14 +152,14 @@ Also you can cancel at any time. If you are cancelling in between the billing pe
 							<div class="faq_blk">
 								<div class="fl" style="position:relative;">
 									<!--<div class="faq_qno fl">Q9.</div>-->
-									<div class="sml_hd faq_qn long_qn fl" style="text-align: left;">Is there any option to have COMPANY_NAME on my premises?</div>
+									<div class="sml_hd faq_qn long_qn fl" style="text-align: left;">Is there any option to have <?php echo COMPANY_NAME?> on my premises?</div>
 
 								</div>
 								<!--<div class="fl qn_bord" style="border-bottom:1px solid #e7e7e7; width:100%; position:relative; top:-12px; z-index:0"></div>-->
 								
 								<div class="cb"></div>
 								<div class="sml_hd_1 faq_ans">
-									Of course, we can install COMPANY_NAME in your environment with a customized price.<br /><a href="mailto:support@COMPANY_NAME.com?subject=Is there any option to have COMPANY_NAME on my premises?" style="text-decoration: none;color: #1e6ea1;">Contact us</a>  for on-premise solutions.   
+									Of course, we can install <?php echo COMPANY_NAME?> in your environment with a customized price.<br /><a href="mailto:support@COMPANY_NAME.com?subject=Is there any option to have <?php echo COMPANY_NAME?> on my premises?" style="text-decoration: none;color: #1e6ea1;">Contact us</a>  for on-premise solutions.   
 
 								</div>
 							</div>

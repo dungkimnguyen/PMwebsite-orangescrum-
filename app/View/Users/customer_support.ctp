@@ -64,7 +64,7 @@
                     <td>
                         <div id="show_button">
                         <span id="quickcase" class="nwa" style="display:block;">
-                            <button class="btn btn_blue"  type="submit">
+                            <button class="btn submit-btn"  type="submit">
                                 <i class="icon-big-tick"></i>
                                 <span id="ctask_btn">Post</span>
                             </button>

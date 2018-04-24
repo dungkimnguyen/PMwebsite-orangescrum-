@@ -38,7 +38,7 @@
 			<div class="fl">
 			<input type="text" class="smal_txt" placeholder="From Date"/> <span>-</span>
 			 <input type="text" class="smal_txt" placeholder="To Date"/>
-			 <button class="btn btn_blue aply_btn" type="submit">Apply</button>
+			 <button class="btn submit-btn aply_btn" type="submit">Apply</button>
 			</div>
 		</div>	
 	</div>

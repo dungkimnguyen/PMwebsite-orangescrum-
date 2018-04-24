@@ -49,7 +49,7 @@ class PostcaseComponent extends CookieComponent {
         $fileArray = $formdata['allFiles'];
         $domain = isset($formdata['auth_domain']) ? $formdata['auth_domain'] : HTTP_ROOT;
 
-        $cloud_storages = $formdata['cloud_storages']; //By COMPANY_NAME
+        $cloud_storages = $formdata['cloud_storages']; 
 
         $success = "fail";
         $emailTitle = "";
@@ -98,7 +98,7 @@ class PostcaseComponent extends CookieComponent {
         }
 
 ####### Case Format
-        if (isset($cloud_storages) && !empty($cloud_storages)) { //By COMPANY_NAME
+        if (isset($cloud_storages) && !empty($cloud_storages)) { 
             $postParam['Easycase']['format'] = 1;
             $format = 1;
         } else {
@@ -354,8 +354,6 @@ class PostcaseComponent extends CookieComponent {
                 $ProjectUser->recursive = -1;
                 $ProjectUser->query("UPDATE project_users SET dt_visited='" . GMT_DATETIME . "' WHERE project_id=" . $projId . " AND user_id=" . SES_ID);
             }
-
-//By COMPANY_NAME
             if (isset($cloud_storages) && !empty($cloud_storages)) {
                 $this->fileInfo($cloud_storages, $projId, $caseid);
             }
@@ -421,14 +419,6 @@ class PostcaseComponent extends CookieComponent {
         return json_encode($ret_res);
     }
 
-    /**
-     * This method keeps file's information of google drive and dropbox.
-     * 
-     * @author COMPANY_NAME
-     * @method fileInfo
-     * @params array, projectid, easycaseid
-     * @return
-     */
     function fileInfo($files, $project_id, $case_id) {
         $Case_file = ClassRegistry::init('CaseFile');
         $Case_file->recursive = -1;
@@ -760,7 +750,7 @@ class PostcaseComponent extends CookieComponent {
         <tr>
         <td width='100%' bgcolor='#ffffff' style='text-align:center;'>
         <p style='color:#222222; font-family:Arial, Helvetica, sans-serif; font-size:11px; line-height:14px; margin-top:0; padding:0; font-weight:normal;padding-top:5px;'>
-        You are receiving this email notification because you have subscribed to COMPANY_NAME, to unsubscribe, please email with subject 'Unsubscribe' to <a href='mailto:".SUPPORT_EMAIL."'>".SUPPORT_EMAIL."</a>
+        You are receiving this email notification because you have subscribed to ".COMPANY_NAME.", to unsubscribe, please email with subject 'Unsubscribe' to <a href='mailto:".SUPPORT_EMAIL."'>".SUPPORT_EMAIL."</a>
 
         </p>
         </td>
@@ -799,8 +789,6 @@ class PostcaseComponent extends CookieComponent {
         }
         $name_email = trim(trim($name_email), ",");
         if (count($usrArr)) {
-
-//By COMPANY_NAME
 //Getting case uniquid of parent from child node.
             if (isset($data['caseUniqId']) && trim($data['caseUniqId'])) {
                 $caseUniqId = $data['caseUniqId'];
@@ -882,7 +870,7 @@ class PostcaseComponent extends CookieComponent {
         $message = "<table><tr><td><table cellpadding='0' cellspacing='0' align='left' border='0' style='border-collapse:collapse;border-spacing:0;text-align:left;width:600px;border:1px solid #5191BD'>
 <tr style='background:#5191BD;height:50px;'>
 <td style='font:bold 14px Arial;padding:10px;color:#FFFFFF;'>
-<span style='font-size:18px;'>COMPANY_NAME</span> - Daily Catch-Up Alert
+<span style='font-size:18px;'>".COMPANY_NAME."</span> - Daily Catch-Up Alert
 </td>
 </tr>
 <tr>
@@ -892,14 +880,14 @@ Hi " . ucfirst(trim($user['name'])) . ",
 </tr>
 <tr>
 <td style='font:14px Arial;padding:10px;'>
-This is a reminder to post your today's updates to COMPANY_NAME. Just reply to this email with the updates, it will be added to the project.
+This is a reminder to post your today's updates to ".COMPANY_NAME.". Just reply to this email with the updates, it will be added to the project.
 <br/><br/><br/><b>NOTE:</b> DO NOT change the SUBJECT while replying.<br/><br/>
 </td>
 </tr>
 <tr>
 <td align='left' style='font:14px Arial;padding:15px 10px;border-top:1px solid #E1E1E1'>
 Thanks,<br/>
-Team COMPANY_NAME
+Team ".COMPANY_NAME."
 </td>	  
 </tr>
 </table></td></tr>
@@ -1023,10 +1011,10 @@ Team COMPANY_NAME
                             $ext_user = '';
 //			    
                             if (@$findEmail['User']['id']) {
-                                $subject = $fromName . " invited you to join " . CMP_SITE . " on COMPANY_NAME";
+                                $subject = $fromName . " invited you to join " . CMP_SITE . " on ".COMPANY_NAME."";
                                 $ext_user = 1;
                             } else {
-                                $subject = $fromName . " invited you to join COMPANY_NAME";
+                                $subject = $fromName . " invited you to join ".COMPANY_NAME."";
                             }
                             $this->Email->delivery = EMAIL_DELIVERY;
                             $this->Email->to = $to;

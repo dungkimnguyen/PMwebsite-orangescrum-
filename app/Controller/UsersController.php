@@ -1,38 +1,4 @@
 <?php
-/*********************************************************************************
- * COMPANY_NAME Community Edition is a web based Project Management software developed by
- * COMPANY_NAME. Copyright (C) 2013-2014
- *
- * This program is free software; you can redistribute it and/or modify it under
- * the terms of the GNU General Public License version 3 as published by the
- * Free Software Foundation with the addition of the following permission added
- * to Section 15 as permitted in Section 7(a): FOR ANY PART OF THE COVERED WORK
- * IN WHICH THE COPYRIGHT IS OWNED BY SUGARCRM, SUGARCRM DISCLAIMS THE WARRANTY
- * OF NON INFRINGEMENT OF THIRD PARTY RIGHTS.
- *
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
- * details.
- *
- * You should have received a copy of the GNU General Public License along with
- * this program; if not, see http://www.gnu.org/licenses or write to the Free
- * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
- * 02110-1301 USA.
- *
- * You can contact COMPANY_NAME, 2059 Camden Ave. #118, San Jose, CA - 95124, US. 
-   or at email address support@COMPANY_NAME.com.
- *
- * The interactive user interfaces in modified source and object code versions
- * of this program must display Appropriate Legal Notices, as required under
- * Section 5 of the GNU General Public License version 3.
- *
- * In accordance with Section 7(b) of the GNU General Public License version 3,
- * these Appropriate Legal Notices must retain the display of the "Powered by
- * COMPANY_NAME" logo. If the display of the logo is not reasonably feasible for
- * technical reasons, the Appropriate Legal Notices must display the words
- * "Powered by COMPANY_NAME".
- ********************************************************************************/
 App::uses('AppController', 'Controller');
 App::import('Vendor', 'oauth');
 class UsersController extends AppController {
@@ -619,10 +585,10 @@ class UsersController extends AppController {
 			
 			$ext_user = '';
 			if (!$getUser['User']['password']) {
-				$subject = $fromName." Invited you to join ".$comp['Company']['name']." on COMPANY_NAME";
+				$subject = $fromName." Invited you to join ".$comp['Company']['name']." on ".COMPANY_NAME."";
 				$ext_user = 1;
 			} else {
-				$subject = $fromName." Invited you to join on COMPANY_NAME";
+				$subject = $fromName." Invited you to join on ".COMPANY_NAME."";
 			}
 			
 			$this->Email->delivery = EMAIL_DELIVERY;
@@ -795,7 +761,7 @@ class UsersController extends AppController {
 				$to = $getData['User']['email'];
 				$newPasswrod = $this->Format->generatePassword(6);
 
-				$subject = "COMPANY_NAME Reset Password";
+				$subject = "".COMPANY_NAME." Reset Password";
 				$message = "<table cellspacing='1' cellpadding='1'  width='100%' border='0'>
 									<tr><td>&nbsp;</td></tr>
 									<tr><td align='left' style='font:normal 14px verdana;'>Hi " . $name . ",</td></tr>
@@ -1047,10 +1013,10 @@ class UsersController extends AppController {
 									
 									$ext_user = '';
 									if(@$findEmail['User']['id']) {
-										$subject = $fromName." invited you to join ".$comp['Company']['name']." on COMPANY_NAME";
+										$subject = $fromName." invited you to join ".$comp['Company']['name']." on ".COMPANY_NAME."";
 										$ext_user = 1;              			
 									}else {
-										$subject = $fromName." invited you to join COMPANY_NAME";
+										$subject = $fromName." invited you to join ".COMPANY_NAME."";
 									}
 									
 									$this->Email->delivery = EMAIL_DELIVERY;
@@ -1191,10 +1157,10 @@ class UsersController extends AppController {
 
 								$ext_user = '';
 								if(@$findEmail['User']['id']) {
-									$subject = $fromName." invited you to join ".$comp['Company']['name']." on COMPANY_NAME";
+									$subject = $fromName." invited you to join ".$comp['Company']['name']." on ".COMPANY_NAME."";
 									$ext_user = 1;              			
 								}else {
-									$subject = $fromName." invited you to join COMPANY_NAME";
+									$subject = $fromName." invited you to join ".COMPANY_NAME."";
 								}			
 
 								$this->Email->delivery = EMAIL_DELIVERY;
@@ -1761,7 +1727,7 @@ class UsersController extends AppController {
 		    $qstr = $user['User']['update_random'];
 		    $to = $upd_email;
 		    $Name = $user['User']['name'];						
-		    $subject = "COMPANY_NAME Login Email ID Confirmation";
+		    $subject = COMPANY_NAME ."Login Email ID Confirmation";
 		    $this->Email->delivery = EMAIL_DELIVERY;
 		    $this->Email->to = $to;  
 		    $this->Email->subject = $subject;
@@ -2655,12 +2621,6 @@ class UsersController extends AppController {
 	     return $contents;
 	}
 	
-	/*
-	 * @author COMPANY_NAME
-	 * @method setClient
-	 * @return an object of google.
-	 */
-	
 	function setClient($isLogin = NULL) {
 	    $client = new Google_Client();
 
@@ -2682,12 +2642,6 @@ class UsersController extends AppController {
 	    $client->setUseObjects(true);
 	    return $client;
 	}
-	
-	/*
-	 * @author COMPANY_NAME
-	 * @method googleConnect
-	 * @return a token.
-	 */
 	
 	function googleSignup(){
 	    $this->layout = 'ajax';
@@ -2728,13 +2682,6 @@ class UsersController extends AppController {
 		setcookie('google_accessToken',$token,time()+300,'/',DOMAIN_COOKIE,false,false);
 	    }
 	}
-	
-	/*
-	 * @author COMPANY_NAME
-	 * @method setClientForConnect
-	 * @return an object of google.
-	 */
-	
 	function setClientForConnect() {
 	    $client = new Google_Client();
 
@@ -2894,7 +2841,7 @@ class UsersController extends AppController {
 						$Company = ClassRegistry::init('Company');
 						$comp = $Company->find('first', array('fields' => array('Company.id', 'Company.name', 'Company.uniq_id')));
 						
-						$subject = $fromName." invited you to join ".$comp['Company']['name']." on COMPANY_NAME";
+						$subject = $fromName." invited you to join ".$comp['Company']['name']." on ".COMPANY_NAME."";
 						
 						$this->Email->delivery = EMAIL_DELIVERY;
 						$this->Email->to = $to;  
@@ -3278,10 +3225,10 @@ function done_cropimage(){
 		$multiple = 0;
 		if(stristr($pjnames,",")) {
 			$multiple = 1;
-			$subject = "You have been added to multiple projects on COMPANY_NAME";
+			$subject = "You have been added to multiple projects on ".COMPANY_NAME."";
 		}
 		else {
-			$subject = "You have been added to ".$pjnames." on COMPANY_NAME";
+			$subject = "You have been added to ".$pjnames." on ".COMPANY_NAME."";
 		}
 		
 		$this->Email->delivery = EMAIL_DELIVERY;

@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 <link rel="shortcut icon" href="<?php echo HTTP_ROOT; ?>favicon.ico"/>
 <meta name="robots" content="noindex,nofollow" />
-<title>COMPANY_NAME</title>
+<title>Tabula</title>
 <?php 
 echo $this->Html->meta('icon'); 
 echo $this->Html->css('style_outer.css?v='.RELEASE);

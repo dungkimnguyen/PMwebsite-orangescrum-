@@ -13,15 +13,6 @@ class ProjectUser extends AppModel {
 	)
     );
 
-    /**
-     * This method gets the user's detail
-     * 
-     * @author COMPANY_NAME
-     * @method getAllNotifyUser
-     * @params number, array, string
-     * @return array of user's detail
-     */
-
     function getAllNotifyUser($project_id = NULL, $emailUser = array(), $type = 'case_status') {
 		if (isset($project_id) && isset($type)) {
 			$this->recursive = -1;

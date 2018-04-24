@@ -72,7 +72,7 @@
 	<span id="err_span" style="color: #900;"></span>
 	<div class="import_btn_div">
 		<img src="<?php echo HTTP_IMAGES; ?>images/case_loader2.gif" alt="Loading..." title="Loading..."  id="loader_img_csv" style="display: none;position: absolute;"/>
-		<button type="submit" id="cnt_btn" class="btn btn_blue btn_impcsv" disabled="true" style="position: relative;">
+		<button type="submit" id="cnt_btn" class="btn submit-btn btn_impcsv" disabled="true" style="position: relative;">
 		<i class="icon-big-tick"></i>
 		<span style="color: #fff;">Continue</span>
 	</button>
@@ -134,7 +134,7 @@
 					<li>Invalid or Misspelled Type</li>
 					<li>Unknown Assigned To Email ID (User must be associated with the project)</li>
 				</ul>
-				<button type="submit" class="btn btn_blue" style="position:relative">
+				<button type="submit" class="btn submit-btn" style="position:relative">
 						<i class="icon-big-tick"></i>
 						Confirm & Import
 					</button>
@@ -200,7 +200,7 @@
 			<?php if($task){?>
 			<tr>
 				<td colspan="7" align="center">
-					<button type="submit" class="btn btn_blue" style="position:relative">
+					<button type="submit" class="btn submit-btn" style="position:relative">
 						<i class="icon-big-tick"></i>
 						Import
 					</button>

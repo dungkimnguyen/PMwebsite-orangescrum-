@@ -61,7 +61,7 @@
 				<img src="<?php echo HTTP_IMAGES; ?>images/case_loader2.gif" alt="Loading..." title="Loading..." />
 				</span>
 				<span id="btn_mlstn">
-					<button type="button" value="Update" name="milestone" id="milestone" class="btn btn_blue" onclick="return validatemilestone();"><i class="icon-big-tick"></i><?php if (!empty($edit)) { echo "Save";}else {echo "Add";} ?></button>
+					<button type="button" value="Update" name="milestone" id="milestone" class="btn submit-btn" onclick="return validatemilestone();"><i class="icon-big-tick"></i><?php if (!empty($edit)) { echo "Save";}else {echo "Add";} ?></button>
 				<!--<button class="btn btn_grey reset_btn" type="button" name="cancel" onclick="closePopup();" ><i class="icon-big-cross"></i>Cancel</button>-->
                  <span class="or_cancel">or
                     <a onclick="closePopup();">Cancel</a>

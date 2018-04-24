@@ -4,7 +4,7 @@
 </style>
 <div class="get_started_outer">
     <?php if(SES_TYPE<3) { ?>
-    <div class="get_hd_bg">Getting Started with COMPANY_NAME</div>
+    <div class="get_hd_bg">Getting Started with <?php echo COMPANY_NAME?></div>
     <div class="get_det">
         <div class="fl get_img get_prj_bg" onclick="newProject();" style="cursor: pointer;">
             <div class="get_prj"></div>
@@ -110,7 +110,7 @@
                     You can respond to the task Email sent from notify@COMPANY_NAME.com.
                 </li>
                 <li>
-                    Your Email response will be posted on COMPANY_NAME against that task.
+                    Your Email response will be posted on <?php echo COMPANY_NAME?> against that task.
                 </li>
                 <li>
                     Respond on a task even on-the-go from your mobile via Email.
@@ -136,7 +136,7 @@
                    Firefox 22 and above, Chrome 32 and above, Safari 6 on Mac OSX 10.8+
                 </li>
                 <li>
-                   You'll see a pop-up when a new task or reply arrives so you can keep track of your Tasks even when you're not looking at COMPANY_NAME.
+                   You'll see a pop-up when a new task or reply arrives so you can keep track of your Tasks even when you're not looking at <?php echo COMPANY_NAME?>.
                 </li>
                 <li>
                     Turn the desktop notification On or Off in the "<?php echo $this->Html->link('Notifications','/users/email_notifications');?>" page.
@@ -160,7 +160,7 @@
             <div class="get_title"><?php echo $this->Html->link('Timezone & Profile','/users/profile',array('class'=>'get_title'));?></div>
             <ul style="padding:5px 15px;margin-top:0px;">
                 <li>
-                    Personalize your COMPANY_NAME account by setting up your Profile details and Timezone.
+                    Personalize your <?php echo COMPANY_NAME?> account by setting up your Profile details and Timezone.
                 </li>
                 <li>
                     The Timezone settings help you to keep stay up-to-date while working with a virtual or remote team.
@@ -183,7 +183,7 @@
                     The Email Notification is set to "No" by default, to get email those email only when selected when task is posted.
                 </li>
                 <li>
-                    Set to "Yes", to get all the Task related Emails from all your assigned projects from COMPANY_NAME.
+                    Set to "Yes", to get all the Task related Emails from all your assigned projects from <?php echo COMPANY_NAME?>.
                 </li>
                 <li>
                     You can enable or disable Google Chrome Desktop Notification on the "Notification" page.

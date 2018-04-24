@@ -23,7 +23,7 @@
 	<td></td>
 	<td class="btn_align">
 	    <span id="btn_cattype">
-		<button type="button" value="Save" name="addcattab" class="btn btn_blue" onclick="savecategorytab();"><i class="icon-big-tick"></i>Save</button>
+		<button type="button" value="Save" name="addcattab" class="btn submit-btn" onclick="savecategorytab();"><i class="icon-big-tick"></i>Save</button>
 		<!--<button class="btn btn_grey reset_btn" type="button" name="cancel" onclick="closePopup();" ><i class="icon-big-cross"></i>Cancel</button>-->
         <span class="or_cancel">or<a name="cancel" onclick="closePopup();">Cancel</a></span>
 	    </span>

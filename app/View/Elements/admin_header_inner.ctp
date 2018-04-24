@@ -184,13 +184,13 @@
      </div>
 
 <div class="admin_cover">
-<!--    <div class="wel_admin fleft">WELCOME COMPANY_NAME ADMINISTRATOR</div>--> 
+<!--    <div class="wel_admin fleft">WELCOME <?php echo COMPANY_NAME?> ADMINISTRATOR</div>--> 
  <div class="clear"></div>
      
  <div class="clear"></div>
 
 <!--		<div style="margin-top:20px;float:left;margin-left:80px;font-size:16px;color:#F16624;font-weight:bold">
-			<span style="width:100%;text-align:center;">WELCOME COMPANY_NAME ADMINISTRATOR</span>
+			<span style="width:100%;text-align:center;">WELCOME <?php echo COMPANY_NAME?> ADMINISTRATOR</span>
 		</div>
 -->	
 

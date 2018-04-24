@@ -1,14 +1,6 @@
 <?php
 class CaseFile extends AppModel{
 	var $name = 'CaseFile';
-/**
-	 * This method calculate the total storage used by user.
-	 * 
-	 * @author COMPANY_NAME
-	 * @method getStorage
-	 * @param
-	 * @return string
-	*/
 	var $cacheQueries = false;
 	function getStorage(){
 	   $this->recursive = -1;

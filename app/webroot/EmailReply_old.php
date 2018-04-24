@@ -430,7 +430,7 @@ if ($emails) {
                     continue;
                 }*/
 				$Failedmessage = "Couldn't identify the Project id - " . $row_pid_eq['project_id'] . "<br/> Sbject: " . $subject;
-				send_email(INFO_MAIL, '', "Failed to save Email reply in COMPANY_NAME", $Failedmessage);
+				send_email(INFO_MAIL, '', "Failed to save Email reply in ".COMPANY_NAME."", $Failedmessage);
 				continue;
             } //if there is not project with this $pj_sname
 	    
@@ -813,7 +813,7 @@ Link: <a href='" . $home . "users/login/dashboard#details/" . $row['uniq_id'] . 
 <i>Brought to you by</i> 
 </td>
 <td align='left' valign='middle' style='padding-left:5px;'>
-<a href='".HTTP_ROOT."' target='_blank' style='font:11px verdana;text-decoration:underline;'>COMPANY_NAME</a>
+<a href='".HTTP_ROOT."' target='_blank' style='font:11px verdana;text-decoration:underline;'>".COMPANY_NAME."</a>
 </td>
 </tr>
 </table>
@@ -826,7 +826,7 @@ Link: <a href='" . $home . "users/login/dashboard#details/" . $row['uniq_id'] . 
 </tr>
 <tr>
 <td align='left' style='font:9px Verdana;padding-top:2px;color:#737373' colspan='2'>
-You are receiving this email notification because you have subscribed to COMPANY_NAME, to unsubscribe, please email with subject 'Unsubscribe' to <a href='mailto:".SUPPORT_EMAIL."'>".SUPPORT_EMAIL."</a>
+You are receiving this email notification because you have subscribed to ".COMPANY_NAME.", to unsubscribe, please email with subject 'Unsubscribe' to <a href='mailto:".SUPPORT_EMAIL."'>".SUPPORT_EMAIL."</a>
 </td>	  
 </tr>
 </table>
@@ -857,11 +857,11 @@ You are receiving this email notification because you have subscribed to COMPANY
                     $checkOSReg_res = mysql_query($checkOSReg_qry) or die('Query failed: ' . mysql_error());
                     $checkOSReg_row = mysql_fetch_assoc($checkOSReg_res);
                     if ($checkOSReg_row['total'] > 0) {
-                        $userMsg = '<span>You do not have access to this Project on COMPANY_NAME.</span><br /><br />';
+                        $userMsg = '<span>You do not have access to this Project on '.COMPANY_NAME.'.</span><br /><br />';
 			$userMsg1 = "";
                     } else {
-                        $userMsg = '<span>This email: &quot;' . $mail_id . '&quot; is not registered with COMPANY_NAME.</span><br /><br />';
-                        $userMsg1 = '<span>Note: <b>To post a reply to this task, please use your COMPANY_NAME login Email ID</b>.</span><br /><br />';
+                        $userMsg = '<span>This email: &quot;' . $mail_id . '&quot; is not registered with '.COMPANY_NAME.'.</span><br /><br />';
+                        $userMsg1 = '<span>Note: <b>To post a reply to this task, please use your '.COMPANY_NAME.' login Email ID</b>.</span><br /><br />';
                     }
 		    
 		    if(php_sapi_name() === "cli") {
@@ -898,7 +898,7 @@ This is to notify you that, the email reply sent could not added to Task#: ' . $
 ' . $userMsg1 . '
 
 <span style="collor:#848484;">Regards,<br />
-The COMPANY_NAME Team</span>
+The '.COMPANY_NAME.' Team</span>
 <br /><br />
 </td>	
 </tr>
@@ -917,7 +917,7 @@ The COMPANY_NAME Team</span>
 </tr>
 <tr>
 <td align="left" style="font:9px Verdana;padding-top:2px;color:#737373" colspan="2">
-You are receiving this email notification because you have subscribed to COMPANY_NAME, to unsubscribe, please email with subject \'Unsubscribe\' to <a href="mailto:'.SUPPORT_EMAIL.'">'.SUPPORT_EMAIL.'</a>
+You are receiving this email notification because you have subscribed to '.COMPANY_NAME.', to unsubscribe, please email with subject \'Unsubscribe\' to <a href="mailto:'.SUPPORT_EMAIL.'">'.SUPPORT_EMAIL.'</a>
 </td>	  
 </tr>
 </table>
@@ -1250,7 +1250,7 @@ function write2log($why, $message, $mail_id, $subject, $date) {
     } else {
 	echo $message . "<br/>";
     }
-    send_email(DEV_EMAIL, '', "Failed to save Email reply in COMPANY_NAME", $message);
+    send_email(DEV_EMAIL, '', "Failed to save Email reply in ".COMPANY_NAME."", $message);
 }
 
 //socket.io implement start

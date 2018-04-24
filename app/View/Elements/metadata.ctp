@@ -1,5 +1,5 @@
 <?php
-$metadesc = "COMPANY_NAME is an awesome Project Management and Collaboration tool. It helps you to organize projects, team, documents & tasks at one place. No matter where your team or customers are, keep everyone on the same page.";
+$metadesc = "".COMPANY_NAME." is an awesome Project Management and Collaboration tool. It helps you to organize projects, team, documents & tasks at one place. No matter where your team or customers are, keep everyone on the same page.";
 
 $metakeyword = "Agile project management tool, Project collaboration tool, Team collaboration, Online project collaboration tool, Awesome project collaboration tool, Project collaboration tool, Project collaboration, Project collaboration software, Project Tracker, Bug Tracking system, Online collaboration, Task Management, Ticketing System, Project tracking, Project planning, Project management software, Online project planning, Project management tool, Free Project management tool";
 
@@ -15,4 +15,4 @@ $metakeyword = "Agile project management tool, Project collaboration tool, Team 
 <meta property="og:url" content="<?php echo HTTPS_HOME;?>" />
 <meta property="og:image" content="<?php echo HTTP_ROOT;?>img/Orange_scrum-logo.jpg" />
 <meta property="og:description" content="<?php echo $metadesc; ?>"/>
-<meta property="og:site_name" content="COMPANY_NAME" />
+<meta property="og:site_name" content="<?php echo COMPANY_NAME?>" />

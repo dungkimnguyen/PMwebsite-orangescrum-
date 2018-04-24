@@ -4,15 +4,6 @@ class CaseUserEmail extends AppModel {
 
     var $name = 'CaseUserEmail';
 
-    /**
-     * This method filters the ids
-     * 
-     * @author COMPANY_NAME
-     * @method getEmailUsers
-     * @params number
-     * @return array of users id
-     */
-
     function getEmailUsers($easyCaseId = NULL) {
 	if (isset($easyCaseId)) {
 	    $this->recursive = -1;

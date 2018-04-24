@@ -165,7 +165,7 @@ echo $this->Form->create('Easycase', array('name' => 'taskcsvForm', 'id' => 'tas
     <tr>
         <td>&nbsp;</td>	
         <td style="text-align: left;">
-            <button type="submit"  class="btn btn_blue">
+            <button type="submit"  class="btn submit-btn">
                 <i class="icon-big-tick"></i>
 <?php echo __("Export CSV"); ?>
             </button>

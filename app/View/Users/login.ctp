@@ -43,7 +43,7 @@ input#txt_Password{font-family: Arial}
                 <div class="bg_logo_inner" style="top:-100px;left:-180px"></div>
                 <div class="logo_landing" style="color:white; font-size:40px;">
 
-                    <img src="<?php echo HTTP_ROOT; ?>img/images/logo_def1.png"  border="0" alt="COMPANY_NAME.com" title="COMPANY_NAME.com" width="80%"/>
+                    <img src="<?php echo HTTP_ROOT; ?>img/images/logo_def1.png"  border="0" alt="<?php echo 'Tabula'?>" title="<?php echo 'Tabula'?>" width="80%"/>
 <!--<h4>Welcome to COMPANY_NAME Community Edition v0.1</h4>-->
                 </div>
                 <div class="login_table" style="background-color:#884bdf">
@@ -169,7 +169,7 @@ input#txt_Password{font-family: Arial}
                                   <!--  <div style="padding:20px 0;text-align:center">
                                     	<a href="https://groups.google.com/forum/#!forum/COMPANY_NAME-community-support" target="_blank" style="margin:0;"><img src="<?php echo HTTP_ROOT."img/google_groups.jpg"; ?>"/></a>
                                         <br/>
-                                    	You can ask for help, share your ideas, contribute to the community edition and also let us know your feedback using the <a href="https://groups.google.com/forum/#!forum/COMPANY_NAME-community-support" target="_blank" style="margin:0;">COMPANY_NAME's Google Group</a>.
+                                    	You can ask for help, share your ideas, contribute to the community edition and also let us know your feedback using the <a href="https://groups.google.com/forum/#!forum/COMPANY_NAME-community-support" target="_blank" style="margin:0;">Tabula Google Group</a>.
                                         
                                     </div>-->
                                 </div>

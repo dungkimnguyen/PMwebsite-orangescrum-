@@ -18,7 +18,7 @@
 	</div>
 	
 	<div class="what_feature fl wt_fl_320">
-	There will be no nasty surprises.<br/>In case of any ceased activity, COMPANY_NAME will be released as open-source for our customers.
+	There will be no nasty surprises.<br/>In case of any ceased activity, <?php echo COMPANY_NAME?> will be released as open-source for our customers.
 	</div>
 </div>
 <div class="cb"></div>

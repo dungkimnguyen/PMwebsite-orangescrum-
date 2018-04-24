@@ -80,7 +80,7 @@ function add_more_temp(){
 						<td style="padding:0px;">&nbsp;</td>
 						<td style="padding:0px;text-align:left;width:454px;" class="btnsForAdd">
 							<span id="taskAddBtns">
-								<button class="btn btn_blue" name="submit_template" type="submit"><i class="icon-big-tick"></i>Add</button>
+								<button class="btn submit-btn" name="submit_template" type="submit"><i class="icon-big-tick"></i>Add</button>
 								<button class="btn btn_grey" type="button" onclick="closePopup();"><i class="icon-big-cross"></i>Cancel</button>
 							</span>
 						</td>

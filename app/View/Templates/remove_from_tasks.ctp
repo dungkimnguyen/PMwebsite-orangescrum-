@@ -83,7 +83,7 @@ if($caseCount > 0)
 	<img src="<?php echo HTTP_IMAGES; ?>images/case_loader2.gif" alt="loading..." title="loading..."/> 
 </span>
 <span id="taskAddBtns" style="display:none;">
-	<button class="btn btn_blue" id="confirmusercls"  value="Confirm" type="button" onclick="remove_cases_template();"><i class="icon-big-tick"></i>Remove</button>
+	<button class="btn submit-btn" id="confirmusercls"  value="Confirm" type="button" onclick="remove_cases_template();"><i class="icon-big-tick"></i>Remove</button>
 	<button class="btn btn_grey" type="button" onclick="closePopup();"><i class="icon-big-cross"></i>Cancel</button>
 </span>
 </div>

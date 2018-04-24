@@ -345,7 +345,7 @@ class FormatHelper extends AppHelper {
 		 $ext = substr(strrchr($oldname, "."), 1);
 		 
 		 if($link == 1) {
-		     if(isset($downloadUrl) && trim($downloadUrl)){ //By COMPANY_NAME
+		     if(isset($downloadUrl) && trim($downloadUrl)){ 
 			 $links1 = "<a href='".$downloadUrl."' target='_blank' style='font:bold 11px verdana;text-transform:uppercase;color:#000000'>";
 		     }else{
 			$links1 = "<a href='".HTTP_ROOT."easycases/download/".$filename."' style='font:bold 11px verdana;text-transform:uppercase;color:#000000'>";
